@@ -19,6 +19,7 @@ local KeyEnterUICorner = Instance.new("UICorner")
 local Key = "BodyParty"
 local KeyI = Instance.new("StringValue")
 local MainFolder = Instance.new("Folder")
+local Core = Instance.new("StringValue")
 
 --Parameters
 Gui.Name = "MultiYieldLoader"
@@ -106,6 +107,8 @@ MainFolder.Parent = game.ReplicatedStorage
 MainFolder.Name = "MultiYield"
 KeyI.Parent = MainFolder
 KeyI.Name = "Key"
+Core.Parent = MainFolder
+Core.Name = "CoreLoader"
 function GUILoadAnim()
 	KeyEnter.Visible = false
 	GetKey.Visible = false
@@ -195,3 +198,4 @@ end)
 
 
 warn("MultiYield Loader loaded!")
+Core.Value = "true_V_2"
