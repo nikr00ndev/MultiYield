@@ -20,6 +20,7 @@ local Key = "BodyParty"
 local KeyI = Instance.new("StringValue")
 local MainFolder = Instance.new("Folder")
 local MainFolderl = Instance.new("Folder")
+local errormessage = Instance.new("TextLabel")
 
 --Parameters
 Gui.Name = "MultiYieldLoader"
@@ -109,6 +110,15 @@ MainFolderl.Parent = MainFolder
 MainFolderl.Name = "Main"
 KeyI.Parent = MainFolderl
 KeyI.Name = "Key"
+errormessage.Parent = Frame
+errormessage.Name = "Error"
+errormessage.Position = UDim2.new(-0.346, 0,1.068, 0)
+errormessage.Size = UDim2.new(0, 591,0, 121)
+errormessage.Font = Enum.Font.SourceSansBold
+errormessage.FontFace.Bold = true
+errormessage.RichText = true
+errormessage.TextScaled = true
+errormessage.Text = "Если при правильном ключе не загружается меню то зайдите в inf yield и напишите "dex" зайдите в game.ReplicatedStorage.MultiYield.Debug там будет 5 елементов посмотрите значение каждого если у каждого значение OK то попробуйте перезайти если нашлись без OK напишите об этом разработчику 1) Игра 2) Елементы там где нету OK 3) Ключ Дискорд: nikr00n_dev Телеграм: @nikr00n"
 
 --Draggable GUI
 local UserInputService = game:GetService("UserInputService")
