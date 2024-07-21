@@ -47,6 +47,11 @@ local MainScrollFunc4FrameFunc1 = Instance.new("TextButton")
 local MainScrollFunc4FrameFunc1UICORNER = Instance.new("UICorner")
 local MainScrollFunc4FrameFunc2 = Instance.new("TextButton")
 local MainScrollFunc4FrameFunc2UICORNER = Instance.new("UICorner")
+local MainScrollFuncStart = Instance.new("Frame")
+local MainScrollFuncStartImage = Instance.new("ImageLabel")
+local MainScrollFuncStartImageUICorner = Instance.new("UICorner")
+local MainScrollFuncStartName = Instance.new("TextLabel")
+local MainScrollFuncStartName2 = Instance.new("TextLabel")
 
 local Messages = Instance.new("Frame")
 
@@ -246,6 +251,53 @@ MainScrollFunc1Frame.Visible = false
 MainScrollFunc2Frame.Visible = false
 MainScrollFunc3Frame.Visible = false
 MainScrollFunc4Frame.Visible = false
+MainScrollFunc4FrameFunc1.Parent = MainFunction.Settings
+MainScrollFunc4FrameFunc2.Parent = MainFunction.Settings
+MainScrollFuncStart.BackgroundTransparency = "1"
+MainScrollFuncStart.Parent = MainFunction
+MainScrollFuncStart.Name = "Start"
+MainScrollFuncStart.BorderSizePixel = "0"
+MainScrollFuncStart.Position = UDim2.new(-0.001, 0,0.002, 0)
+MainScrollFuncStart.Size = UDim2.new(0, 495,0, 308)
+MainScrollFuncStart.Visible = true
+MainScrollFuncStartImage.Parent = MainScrollFuncStart
+MainScrollFuncStartImage.Name = "Image"
+MainScrollFuncStartImage.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFuncStartImage.BorderSizePixel = "0"
+MainScrollFuncStartImage.Position = UDim2.new(0.307, 0,0.37, 0)
+MainScrollFuncStartImage.Size = UDim2.new(0, 198,0, 185)
+MainScrollFuncStartImage.Image = "http://www.roblox.com/asset/?id=18586806783"
+MainScrollFuncStartImage.ImageColor3 = Color3.new(1, 1, 1)
+MainScrollFuncStartImageUICorner.Parent = MainScrollFuncStartImage
+MainScrollFuncStartImageUICorner.CornerRadius = UDim.new(0, 15)
+MainScrollFuncStartName.Parent = MainScrollFuncStart
+MainScrollFuncStartName.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFuncStartName.BackgroundTransparency = "1"
+MainScrollFuncStartName.BorderSizePixel = "0"
+MainScrollFuncStartName.Position = UDim2.new(0.016, 0,0.042, 0)
+MainScrollFuncStartName.Size = UDim2.new(0, 477,0, 50)
+MainScrollFuncStartName.Font = Enum.Font.SourceSansBold
+MainScrollFuncStartName.FontFace.Bold = true
+MainScrollFuncStartName.RichText = true
+MainScrollFuncStartName.Text = "Multi Yield"
+MainScrollFuncStartName.TextScaled = true
+MainScrollFuncStartName.TextSize = "14"
+MainScrollFuncStartName2.Parent = MainScrollFuncStart
+MainScrollFuncStartName2.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFuncStartName2.BackgroundTransparency = "1"
+MainScrollFuncStartName2.BorderSizePixel = "0"
+MainScrollFuncStartName2.Position = UDim2.new(0.016, 0,0.205, 0)
+MainScrollFuncStartName2.Size = UDim2.new(0, 477,0, 31)
+MainScrollFuncStartName2.Font = Enum.Font.SourceSansBold
+MainScrollFuncStartName2.FontFace.Bold = true
+MainScrollFuncStartName2.RichText = true
+MainScrollFuncStartName2.Text = "A roblox hacking script!"
+MainScrollFuncStartName2.TextScaled = true
+MainScrollFuncStartName2.TextSize = "14"
+--MainScrollFuncStartImage
+--MainScrollFuncStartImageUICorner
+--MainScrollFuncStartName
+--MainScrollFuncStartName2
 
 Messages.Parent = Gui
 Messages.Name = "Messages"
@@ -370,6 +422,9 @@ GUIOpenIcon.MouseButton1Click:Connect(function()
 end)
 
 MainScrollFunc1.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
 	MainScrollFunc1Frame.Visible = true
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = false
@@ -377,6 +432,9 @@ MainScrollFunc1.MouseButton1Click:Connect(function()
 	warn("Func1")
 end)
 MainScrollFunc2.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = true
 	MainScrollFunc3Frame.Visible = false
@@ -384,6 +442,9 @@ MainScrollFunc2.MouseButton1Click:Connect(function()
 	warn("Func2")
 end)
 MainScrollFunc3.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = true
@@ -391,6 +452,9 @@ MainScrollFunc3.MouseButton1Click:Connect(function()
 	warn("Func3")
 end)
 MainScrollFunc4.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = false
