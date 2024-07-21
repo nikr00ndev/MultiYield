@@ -25,6 +25,7 @@ local Core = Instance.new("StringValue")
 local CoreMain = Instance.new("StringValue")
 local KeyFolder = MYFolder
 local MainFolder = Instance.new("Folder")
+local CoreLoad = game.ReplicatedStorage.MultiYield.CoreLoader
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
@@ -105,6 +106,8 @@ Debug3.Name = "Debug3"
 Debug4.Name = "Debug4"
 Debug5.Name = "Debug5"
 Debug1.Value = "OK"
+CoreLoader.Parent = CoreFolder
+
 
 Main.Parent = Gui
 Main.Name = "Main"
