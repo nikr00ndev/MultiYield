@@ -359,24 +359,28 @@ MainScrollFunc1.MouseButton1Click:Connect(function()
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = false
 	MainScrollFunc4Frame.Visible = false
+	warn("Func1")
 end)
 MainScrollFunc2.MouseButton1Click:Connect(function()
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = true
 	MainScrollFunc3Frame.Visible = false
 	MainScrollFunc4Frame.Visible = false
+	warn("Func2")
 end)
 MainScrollFunc3.MouseButton1Click:Connect(function()
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = true
 	MainScrollFunc4Frame.Visible = false
+	warn("Func3")
 end)
 MainScrollFunc4.MouseButton1Click:Connect(function()
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = false
 	MainScrollFunc4Frame.Visible = true
+	warn("Func4")
 end)
 
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
