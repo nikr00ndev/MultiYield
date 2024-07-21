@@ -400,7 +400,9 @@ end)
 
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 	MYGUI:Destroy()
+	MYFolder:Destroy()
 	warn("MultiYield destroyed.")
+	script:Destroy()
 end)
 MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	warn("MultiYield restarting.")
@@ -410,6 +412,7 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	MYFolder.Core:Destroy()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua"))()
 	warn("MultiYield restarted!")
+	script:Destroy()
 end)
 Debug4.Value = "OK"
 
@@ -422,5 +425,6 @@ else
 	MYFolder:Destroy()
 	MYGUI:Destroy()
 	error("Invalid Code")
+	script:Destroy()
 end
 Debug5.Value = "OK"
