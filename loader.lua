@@ -19,6 +19,7 @@ local KeyEnterUICorner = Instance.new("UICorner")
 local Key = "BodyParty"
 local KeyI = Instance.new("StringValue")
 local MainFolder = Instance.new("Folder")
+local MainFolderl = Instance.new("Folder")
 
 --Parameters
 Gui.Name = "MultiYieldLoader"
@@ -104,7 +105,9 @@ Name.TextSize = "14"
 Name.TextXAlignment = "Left"
 MainFolder.Parent = game.ReplicatedStorage
 MainFolder.Name = "MultiYield"
-KeyI.Parent = MainFolder
+MainFolderl.Parent = MainFolder
+MainFolderl.Name = "Main"
+KeyI.Parent = MainFolderl
 KeyI.Name = "Key"
 
 --Draggable GUI
