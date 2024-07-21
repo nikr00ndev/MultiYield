@@ -8,7 +8,6 @@ warn("MultiYield loading...")
 -------------------------------------------------------------------------------
 --Locals
 local Gui = Instance.new("ScreenGui")
-local MainFolder = Instance.new("Folder")
 local CoreFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
 local KeyFolder = game.ReplicatedStorage.MultiYield
