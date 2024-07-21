@@ -17,6 +17,7 @@ local Debug5 = Instance.new("StringValue")
 local CoreFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
 local KeyFolder = game.ReplicatedStorage.MultiYield
+local MainFolder = Instance.new("Folder")
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
@@ -52,6 +53,8 @@ Gui.Parent = game.Players.LocalPlayer.PlayerGui
 Gui.ResetOnSpawn = false
 Gui.Name = "MultiYield"
 
+MainFolder.Parent = game.ReplicatedStorage.MultiYield
+MainFolder.Name = "Main"
 DebugFolder.Parent = game.ReplicatedStorage.MultiYield
 DebugFolder.Name = "Debug"
 CoreFolder.Parent = game.ReplicatedStorage.MultiYield
@@ -231,6 +234,10 @@ MainScrollFunc4FrameFunc2.TextScaled = true
 MainScrollFunc4FrameFunc2.TextSize = "14"
 MainScrollFunc4FrameFunc2UICORNER.Parent = MainScrollFunc4FrameFunc2
 MainScrollFunc4FrameFunc2UICORNER.CornerRadius = UDim.new(0, 7)
+MainScrollFunc1Frame.Visible = false
+MainScrollFunc2Frame.Visible = false
+MainScrollFunc3Frame.Visible = false
+MainScrollFunc4Frame.Visible = false
 
 Messages.Parent = Gui
 Messages.Name = "Messages"
@@ -397,7 +404,7 @@ Debug4.Value = "OK"
 
 Core.Value = "AMS_B_@nd_V_2"
 
-if game.ReplicatedStorage.MultiYield.Main.Key.Value == "BodyParty" then
+if game.ReplicatedStorage.MultiYield.Key.Value == "BodyParty" then
 	warn("MultiYield loaded!")
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Made by: nikr00n_dev!"})
 else
