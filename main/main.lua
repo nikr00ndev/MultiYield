@@ -301,6 +301,7 @@ Core.Value = "AMS_B_@nd_V_2"
 
 if MainFolder.Key.Value == "BodyParty" then
 	warn("MultiYield loaded!")
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Made by: nikr00n_dev!"})
 else
 	game.ReplicatedStorage.MultiYield:Destroy()
 	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
