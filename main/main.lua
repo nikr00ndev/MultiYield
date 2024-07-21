@@ -12,7 +12,6 @@ local MainFolder = Instance.new("Folder")
 local CoreFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
 local KeyFolder = game.ReplicatedStorage.MultiYield
-local Key = KeyFolder.Key
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
