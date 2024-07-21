@@ -50,7 +50,6 @@ CoreFolder.Parent = game.ReplicatedStorage.MultiYield
 CoreFolder.Name = "Core"
 Core.Parent = CoreFolder
 Core.Name = "Core"
-KeyFolder.Key.Parent = MainFolder
 
 
 Main.Parent = Gui
@@ -373,7 +372,7 @@ end)
 
 Core.Value = "AMS_B_@nd_V_2"
 
-if MainFolder.Key.Value == "BodyParty" then
+if game.ReplicatedStorage.MultiYield.Main.Key.Value == "BodyParty" then
 	warn("MultiYield loaded!")
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Made by: nikr00n_dev!"})
 else
