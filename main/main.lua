@@ -4,7 +4,7 @@
 --game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
 warn("MultiYield loading...")
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/core/core.lua"))()
 -------------------------------------------------------------------------------
 --Locals
 local LocalPlayer = game.Players.LocalPlayer
@@ -764,7 +764,6 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	script:Destroy()
 end)
 Debug4.Value = "OK"
-
 Core.Value = "AMS_B_@nd_V_2"
 
 if MYFolder.Key.Value == "BodyParty" then
