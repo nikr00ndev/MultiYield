@@ -2,6 +2,8 @@
 
 warn("MultiYield Loader loading...")
 
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "Made by: nikr00n_dev!"})
+
 --Locals
 local Gui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
