@@ -8,6 +8,12 @@ warn("MultiYield loading...")
 -------------------------------------------------------------------------------
 --Locals
 local Gui = Instance.new("ScreenGui")
+local DebugFolder = Instance.new("Folder")
+local Debug1 = Instance.new("StringValue")
+local Debug2 = Instance.new("StringValue")
+local Debug3 = Instance.new("StringValue")
+local Debug4 = Instance.new("StringValue")
+local Debug5 = Instance.new("StringValue")
 local CoreFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
 local KeyFolder = game.ReplicatedStorage.MultiYield
@@ -46,11 +52,23 @@ Gui.Parent = game.Players.LocalPlayer.PlayerGui
 Gui.ResetOnSpawn = false
 Gui.Name = "MultiYield"
 
+DebugFolder.Parent = game.ReplicatedStorage.MultiYiel
+DebugFolder.Name = "Debug"
 CoreFolder.Parent = game.ReplicatedStorage.MultiYield
 CoreFolder.Name = "Core"
 Core.Parent = CoreFolder
 Core.Name = "Core"
-
+Debug1.Parent = DebugFolder
+Debug2.Parent = DebugFolder
+Debug3.Parent = DebugFolder
+Debug4.Parent = DebugFolder
+Debug5.Parent = DebugFolder
+Debug1.Name = "Debug1"
+Debug2.Name = "Debug2"
+Debug3.Name = "Debug3"
+Debug4.Name = "Debug4"
+Debug5.Name = "Debug5"
+Debug1.Value = "OK"
 
 Main.Parent = Gui
 Main.Name = "Main"
@@ -231,6 +249,7 @@ GUIOpenIcon.Image = "http://www.roblox.com/asset/?id=18586806783"
 GUIOpenIcon.ImageColor3 = Color3.new(1, 1, 1)
 GUIOpenIconUICorner.Parent = GUIOpenIcon
 GUIOpenIconUICorner.CornerRadius = UDim.new(0, 15)
+Debug2.Value = "OK"
 
 -------------------------------------------------------------------------------
 --Draggable GUI
@@ -316,6 +335,7 @@ UserInputService.InputChanged:Connect(function(input)
 		update(input)
 	end
 end)
+Debug3.Value = "OK"
 
 -------------------------------------------------------------------------------
 --Functions
@@ -369,6 +389,7 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua"))()
 	warn("MultiYield restarted!")
 end)
+Debug4.Value = "OK"
 
 Core.Value = "AMS_B_@nd_V_2"
 
@@ -380,3 +401,4 @@ else
 	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
 	error("Invalid Code")
 end
+Debug5.Value = "OK"
