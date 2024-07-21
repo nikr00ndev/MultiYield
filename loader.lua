@@ -167,6 +167,7 @@ end)
 
 --Functions
 DestroyButton.MouseButton1Click:Connect(function()
+	game.ReplicatedStorage.MultiYield:Destroy()
 	game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
 	warn("MultiYield Loader Destroyed")
 end)
