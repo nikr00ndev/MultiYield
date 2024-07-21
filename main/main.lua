@@ -22,6 +22,7 @@ local Debug4 = Instance.new("StringValue")
 local Debug5 = Instance.new("StringValue")
 local CoreFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
+local CoreMain = Instance.new("StringValue")
 local KeyFolder = MYFolder
 local MainFolder = Instance.new("Folder")
 
@@ -90,7 +91,9 @@ DebugFolder.Name = "Debug"
 CoreFolder.Parent = MYFolder
 CoreFolder.Name = "Core"
 Core.Parent = CoreFolder
-Core.Name = "Core"
+Core.Name = "CoreMain"
+CoreMain.Parent = CoreFolder
+CoreMain.Name = "Core"
 Debug1.Parent = DebugFolder
 Debug2.Parent = DebugFolder
 Debug3.Parent = DebugFolder
@@ -770,3 +773,4 @@ else
 	script:Destroy()
 end
 Debug5.Value = "OK"
+MainCore.Value = "AMS_B_@nd_C_B_V_4"
