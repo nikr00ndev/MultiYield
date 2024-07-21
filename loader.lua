@@ -108,8 +108,8 @@ MainFolder.Name = "MultiYield"
 MainFolderl.Parent = MainFolder
 MainFolderl.Name = "Main"
 KeyI.Parent = MainFolderl
-KeyI.Name = "lol"
 KeyI.Name = "Key"
+
 --Draggable GUI
 local UserInputService = game:GetService("UserInputService")
 
