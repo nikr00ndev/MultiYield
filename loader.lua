@@ -107,12 +107,19 @@ MainFolder.Name = "MultiYield"
 KeyI.Parent = MainFolder
 KeyI.Name = "Key"
 function GUILoadAnim()
+	KeyEnter.Visible = false
+	GetKey.Visible = false
+	CheckKey.Visible = false
 	Frame:TweenSize(
 		UDim2.new(0, 350,0, 100),
 		Enum.EasingDirection.Out,
 		Enum.EasingStyle.Sine,
 		2
 	)
+	Wait(2)
+	KeyEnter.Visible = true
+	GetKey.Visible = true
+	CheckKey.Visible = true
 end
 
 GUILoadAnim()
