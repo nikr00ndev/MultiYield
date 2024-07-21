@@ -25,9 +25,16 @@ local MainScrollFunc2 = Instance.new("TextButton")
 local MainScrollFunc2UICorner = Instance.new("UICorner")
 local MainScrollFunc3 = Instance.new("TextButton")
 local MainScrollFunc3UICorner = Instance.new("UICorner")
+local MainScrollFunc4 = Instance.new("TextButton")
+local MainScrollFunc4UICorner = Instance.new("UICorner")
 local MainScrollFunc1Frame = Instance.new("Frame")
 local MainScrollFunc2Frame = Instance.new("Frame")
 local MainScrollFunc3Frame = Instance.new("Frame")
+local MainScrollFunc4Frame = Instance.new("Frame")
+local MainScrollFunc4FrameFunc1 = Instance.new("TextButton")
+local MainScrollFunc4FrameFunc1UICORNER = Instance.new("UICorner")
+local MainScrollFunc4FrameFunc2 = Instance.new("TextButton")
+local MainScrollFunc4FrameFunc2UICORNER = Instance.new("UICorner")
 
 local Messages = Instance.new("Frame")
 
@@ -142,6 +149,20 @@ MainScrollFunc3.TextScaled = true
 MainScrollFunc3.Text = "ESP"
 MainScrollFunc3UICorner.Parent = MainScrollFunc3
 MainScrollFunc3UICorner.CornerRadius = UDim.new(0, 8)
+MainScrollFunc4.Parent = MainScrolling
+MainScrollFunc4.Name = "Settings"
+MainScrollFunc4.Position = UDim2.new(0.142, 0,0.099, 0)
+MainScrollFunc4.Size = UDim2.new(0, 86,0, 25)
+MainScrollFunc4.BorderSizePixel = "0"
+MainScrollFunc4.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc4.Font = Enum.Font.SourceSansBold
+MainScrollFunc4.TextSize = "14"
+MainScrollFunc4.FontFace.Bold = true
+MainScrollFunc4.RichText = true
+MainScrollFunc4.TextScaled = true
+MainScrollFunc4.Text = "Settings"
+MainScrollFunc4UICorner.Parent = MainScrollFunc4
+MainScrollFunc4UICorner.CornerRadius = UDim.new(0, 8)
 MainScrollFunc1Frame.Parent = MainFunction
 MainScrollFunc1Frame.Name = "Aimbot"
 MainScrollFunc1Frame.BackgroundTransparency = "1"
@@ -160,6 +181,42 @@ MainScrollFunc3Frame.BackgroundTransparency = "1"
 MainScrollFunc3Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
 MainScrollFunc3Frame.Size = UDim2.new(0, 495,0, 308)
 MainScrollFunc3Frame.Visible = false
+MainScrollFunc4Frame.Parent = MainFunction
+MainScrollFunc4Frame.Name = "Settings"
+MainScrollFunc4Frame.BackgroundTransparency = "1"
+MainScrollFunc4Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
+MainScrollFunc4Frame.Size = UDim2.new(0, 495,0, 308)
+MainScrollFunc4Frame.Visible = false
+MainScrollFunc4FrameFunc1.Parent = MainFunction
+MainScrollFunc4FrameFunc1.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc4FrameFunc1.BorderSizePixel = "0"
+MainScrollFunc4FrameFunc1.Position = UDim2.new(0.03, 0,0.023, 0)
+MainScrollFunc4FrameFunc1.Size = UDim2.new(0, 105,0, 25)
+MainScrollFunc4FrameFunc1.Font = Enum.Font.SourceSansBold
+MainScrollFunc4FrameFunc1.FontFace.Bold = true
+MainScrollFunc4FrameFunc1.RichText = true
+MainScrollFunc4FrameFunc1.Text = "Destroy GUI"
+MainScrollFunc4FrameFunc1.Name = "DestroyGUI"
+MainScrollFunc4FrameFunc1.TextColor3 = Color3.new(0, 0, 0)
+MainScrollFunc4FrameFunc1.TextScaled = true
+MainScrollFunc4FrameFunc1.TextSize = "14"
+MainScrollFunc4FrameFunc1UICORNER.Parent = MainScrollFunc4FrameFunc1
+MainScrollFunc4FrameFunc1UICORNER.CornerRadius = UDim.new(0, 7)
+MainScrollFunc4FrameFunc2.Parent = MainFunction
+MainScrollFunc4FrameFunc2.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc4FrameFunc2.BorderSizePixel = "0"
+MainScrollFunc4FrameFunc2.Position = UDim2.new(0.277, 0,0.023, 0)
+MainScrollFunc4FrameFunc2.Size = UDim2.new(0, 105,0, 25)
+MainScrollFunc4FrameFunc2.Font = Enum.Font.SourceSansBold
+MainScrollFunc4FrameFunc2.FontFace.Bold = true
+MainScrollFunc4FrameFunc2.RichText = true
+MainScrollFunc4FrameFunc2.Text = "Restart GUI"
+MainScrollFunc4FrameFunc2.Name = "RestartGUI"
+MainScrollFunc4FrameFunc2.TextColor3 = Color3.new(0, 0, 0)
+MainScrollFunc4FrameFunc2.TextScaled = true
+MainScrollFunc4FrameFunc2.TextSize = "14"
+MainScrollFunc4FrameFunc2UICORNER.Parent = MainScrollFunc4FrameFunc2
+MainScrollFunc4FrameFunc2UICORNER.CornerRadius = UDim.new(0, 7)
 
 Messages.Parent = Gui
 Messages.Name = "Messages"
@@ -285,16 +342,36 @@ MainScrollFunc1.MouseButton1Click:Connect(function()
 	MainScrollFunc1Frame.Visible = true
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = false
+	MainScrollFunc4Frame.Visible = false
 end)
 MainScrollFunc2.MouseButton1Click:Connect(function()
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = true
 	MainScrollFunc3Frame.Visible = false
+	MainScrollFunc4Frame.Visible = false
 end)
 MainScrollFunc3.MouseButton1Click:Connect(function()
 	MainScrollFunc1Frame.Visible = false
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = true
+	MainScrollFunc4Frame.Visible = false
+end)
+MainScrollFunc4.MouseButton1Click:Connect(function()
+	MainScrollFunc1Frame.Visible = false
+	MainScrollFunc2Frame.Visible = false
+	MainScrollFunc3Frame.Visible = false
+	MainScrollFunc4Frame.Visible = true
+end)
+
+MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
+	warn("MultiYield destroyed.")
+end)
+MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
+	warn("MultiYield restarting.")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua"))()
+	warn("MultiYield restarted!")
 end)
 
 Core.Value = "AMS_B_@nd_V_2"
