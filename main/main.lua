@@ -39,14 +39,31 @@ local MainScrollFunc3 = Instance.new("TextButton")
 local MainScrollFunc3UICorner = Instance.new("UICorner")
 local MainScrollFunc4 = Instance.new("TextButton")
 local MainScrollFunc4UICorner = Instance.new("UICorner")
+local MainScrollFunc5 = Instance.new("TextButton")
+local MainScrollFunc5UICorner = Instance.new("UICorner")
+local MainScrollFunc6 = Instance.new("TextButton")
+local MainScrollFunc6UICorner = Instance.new("UICorner")
+local MainScrollFunc7 = Instance.new("TextButton")
+local MainScrollFunc7UICorner = Instance.new("UICorner")
 local MainScrollFunc1Frame = Instance.new("Frame")
 local MainScrollFunc2Frame = Instance.new("Frame")
 local MainScrollFunc3Frame = Instance.new("Frame")
 local MainScrollFunc4Frame = Instance.new("Frame")
+local MainScrollFunc5Frame = Instance.new("Frame")
+local MainScrollFunc6Frame = Instance.new("Frame")
+local MainScrollFunc7Frame = Instance.new("Frame")
 local MainScrollFunc4FrameFunc1 = Instance.new("TextButton")
 local MainScrollFunc4FrameFunc1UICORNER = Instance.new("UICorner")
 local MainScrollFunc4FrameFunc2 = Instance.new("TextButton")
 local MainScrollFunc4FrameFunc2UICORNER = Instance.new("UICorner")
+local MainScrollFunc4FrameFunc3 = Instance.new("TextLabel")
+local MainScrollFunc4FrameFunc4 = Instance.new("TextLabel")
+local MainScrollFunc1FrameCategory = Instance.new("TextLabel")
+local MainScrollFunc2FrameCategory = Instance.new("TextLabel")
+local MainScrollFunc3FrameCategory = Instance.new("TextLabel")
+local MainScrollFunc5FrameCategory = Instance.new("TextLabel")
+local MainScrollFunc6FrameCategory = Instance.new("TextLabel")
+local MainScrollFunc7FrameCategory = Instance.new("TextLabel")
 local MainScrollFuncStart = Instance.new("Frame")
 local MainScrollFuncStartImage = Instance.new("ImageLabel")
 local MainScrollFuncStartImageUICorner = Instance.new("UICorner")
@@ -193,6 +210,48 @@ MainScrollFunc4.TextScaled = true
 MainScrollFunc4.Text = "Settings"
 MainScrollFunc4UICorner.Parent = MainScrollFunc4
 MainScrollFunc4UICorner.CornerRadius = UDim.new(0, 8)
+MainScrollFunc5.Parent = MainScrolling
+MainScrollFunc5.Name = "Executor"
+MainScrollFunc5.Position = UDim2.new(0.142, 0,0.13, 0)
+MainScrollFunc5.Size = UDim2.new(0, 86,0, 25)
+MainScrollFunc5.BorderSizePixel = "0"
+MainScrollFunc5.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc5.Font = Enum.Font.SourceSansBold
+MainScrollFunc5.TextSize = "14"
+MainScrollFunc5.FontFace.Bold = true
+MainScrollFunc5.RichText = true
+MainScrollFunc5.TextScaled = true
+MainScrollFunc5.Text = "Executor"
+MainScrollFunc5UICorner.Parent = MainScrollFunc5
+MainScrollFunc5UICorner.CornerRadius = UDim.new(0, 8)
+MainScrollFunc6.Parent = MainScrolling
+MainScrollFunc6.Name = "Links"
+MainScrollFunc6.Position = UDim2.new(0.142, 0,0.16, 0)
+MainScrollFunc6.Size = UDim2.new(0, 86,0, 25)
+MainScrollFunc6.BorderSizePixel = "0"
+MainScrollFunc6.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc6.Font = Enum.Font.SourceSansBold
+MainScrollFunc6.TextSize = "14"
+MainScrollFunc6.FontFace.Bold = true
+MainScrollFunc6.RichText = true
+MainScrollFunc6.TextScaled = true
+MainScrollFunc6.Text = "Links"
+MainScrollFunc6UICorner.Parent = MainScrollFunc6
+MainScrollFunc6UICorner.CornerRadius = UDim.new(0, 8)
+MainScrollFunc7.Parent = MainScrolling
+MainScrollFunc7.Name = "Scripts"
+MainScrollFunc7.Position = UDim2.new(0.142, 0,0.19, 0)
+MainScrollFunc7.Size = UDim2.new(0, 86,0, 25)
+MainScrollFunc7.BorderSizePixel = "0"
+MainScrollFunc7.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc7.Font = Enum.Font.SourceSansBold
+MainScrollFunc7.TextSize = "14"
+MainScrollFunc7.FontFace.Bold = true
+MainScrollFunc7.RichText = true
+MainScrollFunc7.TextScaled = true
+MainScrollFunc7.Text = "Scripts"
+MainScrollFunc7UICorner.Parent = MainScrollFunc7
+MainScrollFunc7UICorner.CornerRadius = UDim.new(0, 8)
 MainScrollFunc1Frame.Parent = MainFunction
 MainScrollFunc1Frame.Name = "Aimbot"
 MainScrollFunc1Frame.BackgroundTransparency = "1"
@@ -217,10 +276,28 @@ MainScrollFunc4Frame.BackgroundTransparency = "1"
 MainScrollFunc4Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
 MainScrollFunc4Frame.Size = UDim2.new(0, 495,0, 308)
 MainScrollFunc4Frame.Visible = false
-MainScrollFunc4FrameFunc1.Parent = MainFunction
+MainScrollFunc5Frame.Parent = MainFunction
+MainScrollFunc5Frame.Name = "Executor"
+MainScrollFunc5Frame.BackgroundTransparency = "1"
+MainScrollFunc5Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
+MainScrollFunc5Frame.Size = UDim2.new(0, 495,0, 308)
+MainScrollFunc5Frame.Visible = false
+MainScrollFunc6Frame.Parent = MainFunction
+MainScrollFunc6Frame.Name = "Links"
+MainScrollFunc6Frame.BackgroundTransparency = "1"
+MainScrollFunc6Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
+MainScrollFunc6Frame.Size = UDim2.new(0, 495,0, 308)
+MainScrollFunc6Frame.Visible = false
+MainScrollFunc7Frame.Parent = MainFunction
+MainScrollFunc7Frame.Name = "Scripts"
+MainScrollFunc7Frame.BackgroundTransparency = "1"
+MainScrollFunc7Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
+MainScrollFunc7Frame.Size = UDim2.new(0, 495,0, 308)
+MainScrollFunc7Frame.Visible = false
+MainScrollFunc4FrameFunc1.Parent = MainFunction.Settings
 MainScrollFunc4FrameFunc1.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc4FrameFunc1.BorderSizePixel = "0"
-MainScrollFunc4FrameFunc1.Position = UDim2.new(0.03, 0,0.023, 0)
+MainScrollFunc4FrameFunc1.Position = UDim2.new(0.03, 0,0.101, 0)
 MainScrollFunc4FrameFunc1.Size = UDim2.new(0, 105,0, 25)
 MainScrollFunc4FrameFunc1.Font = Enum.Font.SourceSansBold
 MainScrollFunc4FrameFunc1.FontFace.Bold = true
@@ -232,10 +309,10 @@ MainScrollFunc4FrameFunc1.TextScaled = true
 MainScrollFunc4FrameFunc1.TextSize = "14"
 MainScrollFunc4FrameFunc1UICORNER.Parent = MainScrollFunc4FrameFunc1
 MainScrollFunc4FrameFunc1UICORNER.CornerRadius = UDim.new(0, 7)
-MainScrollFunc4FrameFunc2.Parent = MainFunction
+MainScrollFunc4FrameFunc2.Parent = MainFunction.Settings
 MainScrollFunc4FrameFunc2.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc4FrameFunc2.BorderSizePixel = "0"
-MainScrollFunc4FrameFunc2.Position = UDim2.new(0.277, 0,0.023, 0)
+MainScrollFunc4FrameFunc2.Position = UDim2.new(0.277, 0,0.101, 0)
 MainScrollFunc4FrameFunc2.Size = UDim2.new(0, 105,0, 25)
 MainScrollFunc4FrameFunc2.Font = Enum.Font.SourceSansBold
 MainScrollFunc4FrameFunc2.FontFace.Bold = true
@@ -247,6 +324,118 @@ MainScrollFunc4FrameFunc2.TextScaled = true
 MainScrollFunc4FrameFunc2.TextSize = "14"
 MainScrollFunc4FrameFunc2UICORNER.Parent = MainScrollFunc4FrameFunc2
 MainScrollFunc4FrameFunc2UICORNER.CornerRadius = UDim.new(0, 7)
+MainScrollFunc4FrameFunc3.Parent = MainFunction.Settings
+MainScrollFunc4FrameFunc3.Name = "By"
+MainScrollFunc4FrameFunc3.BackgroundTransparency = "1"
+MainScrollFunc4FrameFunc3.BorderSizePixel = "0"
+MainScrollFunc4FrameFunc3.Position = UDim2.new(0.03, 0,0.221, 0)
+MainScrollFunc4FrameFunc3.Size = UDim2.new(0, 200,0, 25)
+MainScrollFunc4FrameFunc3.Font = Enum.Font.SourceSansBold
+MainScrollFunc4FrameFunc3.FontFace.Bold = true
+MainScrollFunc4FrameFunc3.RichText = true
+MainScrollFunc4FrameFunc3.Text = "By: nikr00n_dev"
+MainScrollFunc4FrameFunc3.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc4FrameFunc3.TextScaled = true
+MainScrollFunc4FrameFunc3.TextSize = "14"
+MainScrollFunc4FrameFunc3.TextXAlignment = "Left"
+MainScrollFunc4FrameFunc4.Parent = MainFunction.Settings
+MainScrollFunc4FrameFunc4.Name = "Category"
+MainScrollFunc4FrameFunc4.BackgroundTransparency = "1"
+MainScrollFunc4FrameFunc4.BorderSizePixel = "0"
+MainScrollFunc4FrameFunc4.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc4FrameFunc4.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc4FrameFunc4.Font = Enum.Font.SourceSansBold
+MainScrollFunc4FrameFunc4.FontFace.Bold = true
+MainScrollFunc4FrameFunc4.RichText = true
+MainScrollFunc4FrameFunc4.Text = "Settings"
+MainScrollFunc4FrameFunc4.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc4FrameFunc4.TextScaled = true
+MainScrollFunc4FrameFunc4.TextSize = "14"
+MainScrollFunc4FrameFunc4.TextXAlignment = "Left"
+MainScrollFunc1FrameCategory.Parent = MainFunction.Aimbot
+MainScrollFunc1FrameCategory.Name = "Category"
+MainScrollFunc1FrameCategory.BackgroundTransparency = "1"
+MainScrollFunc1FrameCategory.BorderSizePixel = "0"
+MainScrollFunc1FrameCategory.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc1FrameCategory.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc1FrameCategory.Font = Enum.Font.SourceSansBold
+MainScrollFunc1FrameCategory.FontFace.Bold = true
+MainScrollFunc1FrameCategory.RichText = true
+MainScrollFunc1FrameCategory.Text = "Aimbot"
+MainScrollFunc1FrameCategory.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc1FrameCategory.TextScaled = true
+MainScrollFunc1FrameCategory.TextSize = "14"
+MainScrollFunc1FrameCategory.TextXAlignment = "Left"
+MainScrollFunc2FrameCategory.Parent = MainFunction.Player
+MainScrollFunc2FrameCategory.Name = "Category"
+MainScrollFunc2FrameCategory.BackgroundTransparency = "1"
+MainScrollFunc2FrameCategory.BorderSizePixel = "0"
+MainScrollFunc2FrameCategory.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc2FrameCategory.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc2FrameCategory.Font = Enum.Font.SourceSansBold
+MainScrollFunc2FrameCategory.FontFace.Bold = true
+MainScrollFunc2FrameCategory.RichText = true
+MainScrollFunc2FrameCategory.Text = "Player"
+MainScrollFunc2FrameCategory.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc2FrameCategory.TextScaled = true
+MainScrollFunc2FrameCategory.TextSize = "14"
+MainScrollFunc2FrameCategory.TextXAlignment = "Left"
+MainScrollFunc3FrameCategory.Parent = MainFunction.ESP
+MainScrollFunc3FrameCategory.Name = "Category"
+MainScrollFunc3FrameCategory.BackgroundTransparency = "1"
+MainScrollFunc3FrameCategory.BorderSizePixel = "0"
+MainScrollFunc3FrameCategory.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc3FrameCategory.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc3FrameCategory.Font = Enum.Font.SourceSansBold
+MainScrollFunc3FrameCategory.FontFace.Bold = true
+MainScrollFunc3FrameCategory.RichText = true
+MainScrollFunc3FrameCategory.Text = "ESP"
+MainScrollFunc3FrameCategory.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc3FrameCategory.TextScaled = true
+MainScrollFunc3FrameCategory.TextSize = "14"
+MainScrollFunc3FrameCategory.TextXAlignment = "Left"
+MainScrollFunc5FrameCategory.Parent = MainFunction.Executor
+MainScrollFunc5FrameCategory.Name = "Category"
+MainScrollFunc5FrameCategory.BackgroundTransparency = "1"
+MainScrollFunc5FrameCategory.BorderSizePixel = "0"
+MainScrollFunc5FrameCategory.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc5FrameCategory.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc5FrameCategory.Font = Enum.Font.SourceSansBold
+MainScrollFunc5FrameCategory.FontFace.Bold = true
+MainScrollFunc5FrameCategory.RichText = true
+MainScrollFunc5FrameCategory.Text = "Executor"
+MainScrollFunc5FrameCategory.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc5FrameCategory.TextScaled = true
+MainScrollFunc5FrameCategory.TextSize = "14"
+MainScrollFunc5FrameCategory.TextXAlignment = "Left"
+MainScrollFunc6FrameCategory.Parent = MainFunction.Links
+MainScrollFunc6FrameCategory.Name = "Links"
+MainScrollFunc6FrameCategory.BackgroundTransparency = "1"
+MainScrollFunc6FrameCategory.BorderSizePixel = "0"
+MainScrollFunc6FrameCategory.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc6FrameCategory.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc6FrameCategory.Font = Enum.Font.SourceSansBold
+MainScrollFunc6FrameCategory.FontFace.Bold = true
+MainScrollFunc6FrameCategory.RichText = true
+MainScrollFunc6FrameCategory.Text = "Links"
+MainScrollFunc6FrameCategory.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc6FrameCategory.TextScaled = true
+MainScrollFunc6FrameCategory.TextSize = "14"
+MainScrollFunc6FrameCategory.TextXAlignment = "Left"
+MainScrollFunc7FrameCategory.Parent = MainFunction.Scripts
+MainScrollFunc7FrameCategory.Name = "Scripts"
+MainScrollFunc7FrameCategory.BackgroundTransparency = "1"
+MainScrollFunc7FrameCategory.BorderSizePixel = "0"
+MainScrollFunc7FrameCategory.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc7FrameCategory.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc7FrameCategory.Font = Enum.Font.SourceSansBold
+MainScrollFunc7FrameCategory.FontFace.Bold = true
+MainScrollFunc7FrameCategory.RichText = true
+MainScrollFunc7FrameCategory.Text = "Scripts"
+MainScrollFunc7FrameCategory.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc7FrameCategory.TextScaled = true
+MainScrollFunc7FrameCategory.TextSize = "14"
+MainScrollFunc7FrameCategory.TextXAlignment = "Left"
 MainScrollFunc1Frame.Visible = false
 MainScrollFunc2Frame.Visible = false
 MainScrollFunc3Frame.Visible = false
@@ -308,6 +497,25 @@ function GUILoadAnim()
 	MainScrolling.Visible = true
 	GUIOpenIcon:TweenSize(
 		UDim2.new(0, 50,0, 50),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		3
+	)
+end
+function GUIDestroyAnim()
+	MainFunction.Visible = false
+	MainScrolling.Visible = false
+	Main:TweenSize(
+		UDim2.new(0, 0, 0, 0),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		2
+	)
+	wait(2)
+	MainFunction.Visible = true
+	MainScrolling.Visible = true
+	GUIOpenIcon:TweenSize(
+		UDim2.new(0, 0, 0, 0),
 		Enum.EasingDirection.Out,
 		Enum.EasingStyle.Sine,
 		3
@@ -446,6 +654,9 @@ MainScrollFunc1.MouseButton1Click:Connect(function()
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = false
 	MainScrollFunc4Frame.Visible = false
+	MainScrollFunc5Frame.Visible = false
+	MainScrollFunc6Frame.Visible = false
+	MainScrollFunc7Frame.Visible = false
 	warn("Func1")
 end)
 MainScrollFunc2.MouseButton1Click:Connect(function()
@@ -456,6 +667,9 @@ MainScrollFunc2.MouseButton1Click:Connect(function()
 	MainScrollFunc2Frame.Visible = true
 	MainScrollFunc3Frame.Visible = false
 	MainScrollFunc4Frame.Visible = false
+	MainScrollFunc5Frame.Visible = false
+	MainScrollFunc6Frame.Visible = false
+	MainScrollFunc7Frame.Visible = false
 	warn("Func2")
 end)
 MainScrollFunc3.MouseButton1Click:Connect(function()
@@ -466,6 +680,9 @@ MainScrollFunc3.MouseButton1Click:Connect(function()
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = true
 	MainScrollFunc4Frame.Visible = false
+	MainScrollFunc5Frame.Visible = false
+	MainScrollFunc6Frame.Visible = false
+	MainScrollFunc7Frame.Visible = false
 	warn("Func3")
 end)
 MainScrollFunc4.MouseButton1Click:Connect(function()
@@ -476,10 +693,53 @@ MainScrollFunc4.MouseButton1Click:Connect(function()
 	MainScrollFunc2Frame.Visible = false
 	MainScrollFunc3Frame.Visible = false
 	MainScrollFunc4Frame.Visible = true
+	MainScrollFunc5Frame.Visible = false
+	MainScrollFunc6Frame.Visible = false
+	MainScrollFunc7Frame.Visible = false
 	warn("Func4")
+end)
+MainScrollFunc5.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
+	MainScrollFunc1Frame.Visible = false
+	MainScrollFunc2Frame.Visible = false
+	MainScrollFunc3Frame.Visible = false
+	MainScrollFunc4Frame.Visible = false
+	MainScrollFunc5Frame.Visible = true
+	MainScrollFunc6Frame.Visible = false
+	MainScrollFunc7Frame.Visible = false
+	warn("Func5")
+end)
+MainScrollFunc6.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
+	MainScrollFunc1Frame.Visible = false
+	MainScrollFunc2Frame.Visible = false
+	MainScrollFunc3Frame.Visible = false
+	MainScrollFunc4Frame.Visible = false
+	MainScrollFunc5Frame.Visible = false
+	MainScrollFunc6Frame.Visible = true
+	MainScrollFunc7Frame.Visible = false
+	warn("Func6")
+end)
+MainScrollFunc7.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
+	MainScrollFunc1Frame.Visible = false
+	MainScrollFunc2Frame.Visible = false
+	MainScrollFunc3Frame.Visible = false
+	MainScrollFunc4Frame.Visible = false
+	MainScrollFunc5Frame.Visible = false
+	MainScrollFunc6Frame.Visible = false
+	MainScrollFunc7Frame.Visible = true
+	warn("Func7")
 end)
 
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
+	GUIDestroyAnim()
 	MYGUI:Destroy()
 	MYFolder:Destroy()
 	warn("MultiYield destroyed.")
@@ -487,6 +747,7 @@ MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 end)
 MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	warn("MultiYield restarting.")
+	GUIDestroyAnim()
 	MYGUI:Destroy()
 	MYFolder.Main:Destroy()
 	MYFolder.Debug:Destroy()
