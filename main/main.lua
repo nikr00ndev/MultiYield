@@ -46,7 +46,7 @@ CoreFolder.Parent = game.ReplicatedStorage.MultiYield
 CoreFolder.Name = "Core"
 Core.Parent = CoreFolder
 Core.Name = "Core"
-Code.Parent = MainFolder
+KeyFolder.Key.Parent = MainFolder
 
 
 Main.Parent = Gui
