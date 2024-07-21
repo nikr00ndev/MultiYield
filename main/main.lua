@@ -90,7 +90,7 @@ Main.Parent = Gui
 Main.Name = "Main"
 Main.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
 Main.Position = UDim2.new(0.087, 0,0.114, 0)
-Main.Size = UDim2.new(0, 638,0, 347)
+Main.Size = UDim2.new(0, 0, 0, 0)
 MainUICorner.CornerRadius = UDim.new(0, 15)
 MainUICorner.Parent = Main
 MainHideButton.Name = "Hide"
@@ -294,10 +294,25 @@ MainScrollFuncStartName2.RichText = true
 MainScrollFuncStartName2.Text = "A roblox hacking script!"
 MainScrollFuncStartName2.TextScaled = true
 MainScrollFuncStartName2.TextSize = "14"
---MainScrollFuncStartImage
---MainScrollFuncStartImageUICorner
---MainScrollFuncStartName
---MainScrollFuncStartName2
+function GUILoadAnim()
+	MainFunction.Visible = false
+	MainScrolling.Visible = false
+	Main:TweenSize(
+		UDim2.new(0, 638,0, 347),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		2
+	)
+	wait(2)
+	MainFunction.Visible = true
+	MainScrolling.Visible = true
+	GUIOpenIcon:TweenSize(
+		UDim2.new(0, 50,0, 50),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		3
+	)
+end
 
 Messages.Parent = Gui
 Messages.Name = "Messages"
@@ -311,12 +326,14 @@ GUIOpenIcon.Name = "Icon"
 GUIOpenIcon.Parent = Gui
 GUIOpenIcon.BackgroundColor3 = Color3.new(1, 1, 1)
 GUIOpenIcon.Position = UDim2.new(0.481, 0,0.025, 0)
-GUIOpenIcon.Size = UDim2.new(0, 50,0, 50)
+GUIOpenIcon.Size = UDim2.new(0, 0, 0, 0)
 GUIOpenIcon.Image = "http://www.roblox.com/asset/?id=18586806783"
 GUIOpenIcon.ImageColor3 = Color3.new(1, 1, 1)
 GUIOpenIconUICorner.Parent = GUIOpenIcon
 GUIOpenIconUICorner.CornerRadius = UDim.new(0, 15)
 Debug2.Value = "OK"
+
+GUILoadAnim()
 
 -------------------------------------------------------------------------------
 --Draggable GUI
