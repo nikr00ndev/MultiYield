@@ -753,6 +753,7 @@ MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 end)
 MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	warn("MultiYield restarting.")
+	game.ReplicatedStorage.MultiYield.Core.CoreLoader.Parent = game.ReplicatedStorage.MultiYield
 	GUIDestroyAnim()
 	MYGUI:Destroy()
 	MYFolder.Main:Destroy()
