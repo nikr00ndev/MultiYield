@@ -52,7 +52,7 @@ Gui.Parent = game.Players.LocalPlayer.PlayerGui
 Gui.ResetOnSpawn = false
 Gui.Name = "MultiYield"
 
-DebugFolder.Parent = game.ReplicatedStorage.MultiYiel
+DebugFolder.Parent = game.ReplicatedStorage.MultiYield
 DebugFolder.Name = "Debug"
 CoreFolder.Parent = game.ReplicatedStorage.MultiYield
 CoreFolder.Name = "Core"
