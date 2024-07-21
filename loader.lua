@@ -29,7 +29,7 @@ Frame.Parent = Gui
 Frame.BackgroundColor3 = Color3.new(0.266667, 0.266667, 0.266667)
 Frame.BorderColor3 = Color3.new(0, 0, 0)
 Frame.Position = UDim2.new(0.365, 0,0.415, 0)
-Frame.Size = UDim2.new(0, 350,0, 100)
+Frame.Size = UDim2.new(0, 0, 0, 0)
 Frame.BorderSizePixel = "0"
 FrameUICorner.Parent = Frame
 FrameUICorner.CornerRadius = UDim.new(0, 9)
@@ -106,6 +106,16 @@ MainFolder.Parent = game.ReplicatedStorage
 MainFolder.Name = "MultiYield"
 KeyI.Parent = MainFolder
 KeyI.Name = "Key"
+function GUILoadAnim()
+	Frame:TweenSize(
+		UDim2.new(0, 350,0, 100),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		2
+	)
+end
+
+GUILoadAnim()
 
 --Draggable GUI
 local UserInputService = game:GetService("UserInputService")
