@@ -7,6 +7,12 @@ warn("MultiYield loading...")
 
 -------------------------------------------------------------------------------
 --Locals
+local LocalPlayer = game.Players.LocalPlayer
+local PlayerGUI = LocalPlayer.PlayerGui
+local PlayerBackpack = LocalPlayer.Backpack
+local ReplicatedStorage = game.ReplicatedStorage
+local MYFolder = game.ReplicatedStorage.MultiYield
+
 local Gui = Instance.new("ScreenGui")
 local DebugFolder = Instance.new("Folder")
 local Debug1 = Instance.new("StringValue")
@@ -16,7 +22,7 @@ local Debug4 = Instance.new("StringValue")
 local Debug5 = Instance.new("StringValue")
 local CoreFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
-local KeyFolder = game.ReplicatedStorage.MultiYield
+local KeyFolder = MYFolder
 local MainFolder = Instance.new("Folder")
 
 local Main = Instance.new("Frame")
@@ -49,15 +55,17 @@ local GUIOpenIconUICorner = Instance.new("UICorner")
 
 -------------------------------------------------------------------------------
 --Parameters
-Gui.Parent = game.Players.LocalPlayer.PlayerGui
+Gui.Parent = PlayerGUI
 Gui.ResetOnSpawn = false
 Gui.Name = "MultiYield"
 
-MainFolder.Parent = game.ReplicatedStorage.MultiYield
+local MYGUI = LocalPlayer.PlayerGui.MultiYield
+
+MainFolder.Parent = MYFolder
 MainFolder.Name = "Main"
-DebugFolder.Parent = game.ReplicatedStorage.MultiYield
+DebugFolder.Parent = MYFolder
 DebugFolder.Name = "Debug"
-CoreFolder.Parent = game.ReplicatedStorage.MultiYield
+CoreFolder.Parent = MYFolder
 CoreFolder.Name = "Core"
 Core.Parent = CoreFolder
 Core.Name = "Core"
@@ -262,7 +270,7 @@ Debug2.Value = "OK"
 --Draggable GUI
 local UserInputService = game:GetService("UserInputService")
 
-local gui = game.Players.LocalPlayer.PlayerGui.MultiYield.Main
+local gui = MYGUI.Main
 
 local dragging
 local dragInput
@@ -305,7 +313,7 @@ end)
 --Draggable Icon GUI
 local UserInputService = game:GetService("UserInputService")
 
-local gui = game.Players.LocalPlayer.PlayerGui.MultiYield.Icon
+local gui = MYGUI.Icon
 
 local dragging
 local dragInput
@@ -347,16 +355,16 @@ Debug3.Value = "OK"
 -------------------------------------------------------------------------------
 --Functions
 MainHideButton.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.PlayerGui.MultiYield.Main.Visible = false
+	MYGUI.Main.Visible = false
 	warn("MultiYield hiden.")
 end)
 
 GUIOpenIcon.MouseButton1Click:Connect(function()
-	if game.Players.LocalPlayer.PlayerGui.MultiYield.Main.Visible == false then
-		game.Players.LocalPlayer.PlayerGui.MultiYield.Main.Visible = true
+	if MYGUI.Main.Visible == false then
+		MYGUI.Main.Visible = true
 		warn("MultiYield shown.")
-	elseif game.Players.LocalPlayer.PlayerGui.MultiYield.Main.Visible == true then
-		game.Players.LocalPlayer.PlayerGui.MultiYield.Main.Visible = false
+	elseif MYGUI.Main.Visible == true then
+		MYGUI.Main.Visible = false
 		warn("MultiYield hiden.")
 	end
 end)
@@ -391,12 +399,15 @@ MainScrollFunc4.MouseButton1Click:Connect(function()
 end)
 
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
+	MYGUI:Destroy()
 	warn("MultiYield destroyed.")
 end)
 MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
-	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
 	warn("MultiYield restarting.")
+	MYGUI:Destroy()
+	MYFolder.Main:Destroy()
+	MYFolder.Debug:Destroy()
+	MYFolder.Core:Destroy()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua"))()
 	warn("MultiYield restarted!")
 end)
@@ -404,12 +415,12 @@ Debug4.Value = "OK"
 
 Core.Value = "AMS_B_@nd_V_2"
 
-if game.ReplicatedStorage.MultiYield.Key.Value == "BodyParty" then
+if MYFolder.Key.Value == "BodyParty" then
 	warn("MultiYield loaded!")
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Made by: nikr00n_dev!"})
 else
-	game.ReplicatedStorage.MultiYield:Destroy()
-	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
+	MYFolder:Destroy()
+	MYGUI:Destroy()
 	error("Invalid Code")
 end
 Debug5.Value = "OK"
