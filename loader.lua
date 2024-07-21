@@ -121,6 +121,17 @@ function GUILoadAnim()
 	GetKey.Visible = true
 	CheckKey.Visible = true
 end
+function GUIDestroyAnim()
+	KeyEnter.Visible = false
+	GetKey.Visible = false
+	CheckKey.Visible = false
+	Frame:TweenSize(
+		UDim2.new(0, 0, 0, 0),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		2
+	)
+end
 
 GUILoadAnim()
 
@@ -168,6 +179,7 @@ end)
 --Functions
 DestroyButton.MouseButton1Click:Connect(function()
 	game.ReplicatedStorage.MultiYield:Destroy()
+	GUIDestroyAnim()
 	game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
 	warn("MultiYield Loader Destroyed")
 end)
