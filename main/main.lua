@@ -46,8 +46,6 @@ Gui.Parent = game.Players.LocalPlayer.PlayerGui
 Gui.ResetOnSpawn = false
 Gui.Name = "MultiYield"
 
-MainFolder.Parent = game.ReplicatedStorage.MultiYield
-MainFolder.Name = "Main"
 CoreFolder.Parent = game.ReplicatedStorage.MultiYield
 CoreFolder.Name = "Core"
 Core.Parent = CoreFolder
