@@ -11,8 +11,8 @@ local Gui = Instance.new("ScreenGui")
 local MainFolder = Instance.new("Folder")
 local CoreFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
-local CodeFolder = game.ReplicatedStorage.MultiYield
-local Code = CodeFolder.Code
+local KeyFolder = game.ReplicatedStorage.MultiYield
+local Key = KeyFolder.Key
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
@@ -300,7 +300,7 @@ end)
 
 Core.Value = "AMS_B_@nd_V_2"
 
-if MainFolder.Code.Value == "BodyParty" then
+if MainFolder.Key.Value == "BodyParty" then
 	warn("MultiYield loaded!")
 else
 	game.ReplicatedStorage.MultiYield:Destroy()
