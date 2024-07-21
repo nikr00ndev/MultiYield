@@ -118,7 +118,7 @@ errormessage.Font = Enum.Font.SourceSansBold
 errormessage.FontFace.Bold = true
 errormessage.RichText = true
 errormessage.TextScaled = true
-errormessage.Text = "Если при правильном ключе не загружается меню то зайдите в inf yield и напишите "dex" зайдите в game.ReplicatedStorage.MultiYield.Debug там будет 5 елементов посмотрите значение каждого если у каждого значение OK то попробуйте перезайти если нашлись без OK напишите об этом разработчику 1) Игра 2) Елементы там где нету OK 3) Ключ Дискорд: nikr00n_dev Телеграм: @nikr00n"
+errormessage.Text = "Если при правильном ключе не загружается меню то зайдите в inf yield и напишите dex зайдите в game.ReplicatedStorage.MultiYield.Debug там будет 5 елементов посмотрите значение каждого если у каждого значение OK то попробуйте перезайти если нашлись без OK напишите об этом разработчику 1) Игра 2) Елементы там где нету OK 3) Ключ Дискорд: nikr00n_dev Телеграм: @nikr00n"
 
 --Draggable GUI
 local UserInputService = game:GetService("UserInputService")
