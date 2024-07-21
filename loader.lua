@@ -15,6 +15,8 @@ local Name = Instance.new("TextLabel")
 local KeyEnter = Instance.new("TextBox")
 local KeyEnterUICorner = Instance.new("UICorner")
 local Key = "BodyParty"
+local KeyI = Instance.new("StringValue")
+local MainFolder = Instance.new("Folder")
 
 --Parameters
 Gui.Name = "MultiYieldLoader"
@@ -98,6 +100,10 @@ Name.TextColor3 = Color3.new(1, 1, 1)
 Name.TextScaled = true
 Name.TextSize = "14"
 Name.TextXAlignment = "Left"
+MainFolder.Parent = game.ReplicatedStorage
+MainFolder.Name = "MultiYield"
+KeyI.Parent = MainFolder
+KeyI.Name = "Key"
 
 --Draggable GUI
 local UserInputService = game:GetService("UserInputService")
@@ -147,7 +153,11 @@ DestroyButton.MouseButton1Click:Connect(function()
 end)
 CheckKey.MouseButton1Click:Connect(function()
 	if KeyEnter.Text == Key then
+		KeyI.Value = Key
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua'))()
+		game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
+	else
+		KeyEnter.Text = "Invalid Key!"
 	end
 end)
 
