@@ -773,4 +773,4 @@ else
 	script:Destroy()
 end
 Debug5.Value = "OK"
-MainCore.Value = "AMS_B_@nd_C_B_V_4"
+CoreMain.Value = "AMS_B_@nd_C_B_V_4"
