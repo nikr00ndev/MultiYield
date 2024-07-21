@@ -8,6 +8,11 @@ warn("MultiYield loading...")
 -------------------------------------------------------------------------------
 --Locals
 local Gui = Instance.new("ScreenGui")
+local MainFolder = Instance.new("Folder")
+local CoreFolder = Instance.new("Folder")
+local Core = Instance.new("StringValue")
+local CodeFolder = game.ReplicatedStorage.MultiYield
+local Code = CodeFolder.Code
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
@@ -35,6 +40,15 @@ local GUIOpenIconUICorner = Instance.new("UICorner")
 Gui.Parent = game.Players.LocalPlayer.PlayerGui
 Gui.ResetOnSpawn = false
 Gui.Name = "MultiYield"
+
+MainFolder.Parent = game.ReplicatedStorage.MultiYield
+MainFolder.Name = "Main"
+CoreFolder.Parent = game.ReplicatedStorage.MultiYield
+CoreFolder.Name = "Core"
+Core.Parent = CoreFolder
+Core.Name = "Core"
+Code.Parent = MainFolder
+
 
 Main.Parent = Gui
 Main.Name = "Main"
@@ -284,5 +298,12 @@ MainScrollFunc3.MouseButton1Click:Connect(function()
 	MainScrollFunc3Frame.Visible = true
 end)
 
+Core.Value = "AMS_B_@nd_V_2"
 
-warn("MultiYield loaded!")
+if MainFolder.Code.Value == "BodyParty" then
+	warn("MultiYield loaded!")
+else
+	game.ReplicatedStorage.MultiYield:Destroy()
+	game.Players.LocalPlayer.PlayerGui.MultiYield:Destroy()
+	error("Invalid Code")
+end
