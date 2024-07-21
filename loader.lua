@@ -19,7 +19,6 @@ local KeyEnterUICorner = Instance.new("UICorner")
 local Key = "BodyParty"
 local KeyI = Instance.new("StringValue")
 local MainFolder = Instance.new("Folder")
-local test = "1"
 
 --Parameters
 Gui.Name = "MultiYieldLoader"
