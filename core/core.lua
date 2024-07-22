@@ -11,7 +11,7 @@ OkTextMain.Name = "MainLoaded"
 
 
 wait(5)
-if game.ReplicatedStorage.MultiYield.Core.CoreLoader.Value == "true_V_2" and game.ReplicatedStorage.MultiYield.Core.Core.Value == "AMS_B_@nd_C_B_V_4" and game.ReplicatedStorage.MultiYield.Core.CoreMain.Value == "AMS_B_@nd_V_2" then
+if game.ReplicatedStorage.MultiYield.Core.CoreLoader.Value == "true_V_2" and game.ReplicatedStorage.MultiYield.Core.Core.Value == "AMS_B_@nd_C_B_V_4" and game.ReplicatedStorage.MultiYield.Core.CoreMain.Value == "AMS_B_@nd_V_2" and game.ReplicatedStorage.MultiYield.Core.CoreAPI == "iia72haf8ajqha7fyq81yqywr82726123d_dhahsqyagf_17dyhadsgafgq2" then
 	OkTextCore.Value = "true"
 end
 OkTextMain.Value = "true"
