@@ -3,12 +3,9 @@
 --Notes
 --game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
-function Message(Title, Text)
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = Title, Text = Text})
-end
+-------------------------------------------------------------------------------
 
 warn("MultiYield loading...")
-Message("MultiYield", "Loading...")
 
 -------------------------------------------------------------------------------
 --Locals
@@ -70,6 +67,9 @@ local MainScrollFunc3FrameCategory = Instance.new("TextLabel")
 local MainScrollFunc5FrameCategory = Instance.new("TextLabel")
 local MainScrollFunc6FrameCategory = Instance.new("TextLabel")
 local MainScrollFunc7FrameCategory = Instance.new("TextLabel")
+local MainScrollFunc6FrameText1 = Instance.new("TextLabel")
+local MainScrollFunc6FrameRunB1 = Instance.new("TextButton")
+local MainScrollFunc6FrameRunB1UICorner = Instance.new("UICorner")
 local MainScrollFuncStart = Instance.new("Frame")
 local MainScrollFuncStartImage = Instance.new("ImageLabel")
 local MainScrollFuncStartImageUICorner = Instance.new("UICorner")
@@ -81,15 +81,18 @@ local Messages = Instance.new("Frame")
 local GUIOpenIcon = Instance.new("ImageButton")
 local GUIOpenIconUICorner = Instance.new("UICorner")
 
-
+-------------------------------------------------------------------------------
 --Functions
 function Message(Title, Text)
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = Title, Text = Text})
 end
+function GuiMessage(MesTitle, MesText)
+	--game:GetService("StarterGui"):SetCore("SendNotification", {Title = MesTitle, Text = MesText})
+end
 function WarnMessage(Message)
 	warn(Message)
 end
-
+GuiMessage("MultiYield", "MultiYield loading...")
 -------------------------------------------------------------------------------
 --Parameters
 Gui.Parent = PlayerGUI
@@ -454,6 +457,34 @@ MainScrollFunc7FrameCategory.TextColor3 = Color3.new(1, 1, 1)
 MainScrollFunc7FrameCategory.TextScaled = true
 MainScrollFunc7FrameCategory.TextSize = "14"
 MainScrollFunc7FrameCategory.TextXAlignment = "Left"
+MainScrollFunc6FrameText1.Parent = MainFunction.Links
+MainScrollFunc6FrameText1.Name = "InfYield"
+MainScrollFunc6FrameText1.BackgroundTransparency = "1"
+MainScrollFunc6FrameText1.BorderSizePixel = "0"
+MainScrollFunc6FrameText1.Position = UDim2.new(0.022, 0,0.039, 0)
+MainScrollFunc6FrameText1.Size = UDim2.new(0, 360,0, 33)
+MainScrollFunc6FrameText1.Font = Enum.Font.SourceSansBold
+MainScrollFunc6FrameText1.FontFace.Bold = true
+MainScrollFunc6FrameText1.RichText = true
+MainScrollFunc6FrameText1.Text = "InfinityYield"
+MainScrollFunc6FrameText1.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc6FrameText1.TextScaled = true
+MainScrollFunc6FrameText1.TextSize = "14"
+MainScrollFunc6FrameRunB1.Parent = MainFunction.Links
+MainScrollFunc6FrameRunB1.Name = "InfYieldRun"
+MainScrollFunc6FrameRunB1.BackgroundColor3 = Color3.new(1, 0, 0)
+MainScrollFunc6FrameRunB1.BorderSizePixel = "0"
+MainScrollFunc6FrameRunB1.Position = UDim2.new(0.749, 0,0.039, 0)
+MainScrollFunc6FrameRunB1.Size = UDim2.new(0, 113,0, 33)
+MainScrollFunc6FrameRunB1.Font = Enum.Font.SourceSansBold
+MainScrollFunc6FrameRunB1.FontFace.Bold = true
+MainScrollFunc6FrameRunB1.RichText = true
+MainScrollFunc6FrameRunB1.Text = "RUN"
+MainScrollFunc6FrameRunB1.TextColor3 = Color3.new(0, 0, 0)
+MainScrollFunc6FrameRunB1.TextScaled = true
+MainScrollFunc6FrameRunB1.TextSize = "14"
+MainScrollFunc6FrameRunB1UICorner.Parent = MainScrollFunc6FrameRunB1
+MainScrollFunc6FrameRunB1UICorner.CornerRadius = UDim.new(0, 11)
 MainScrollFunc1Frame.Visible = false
 MainScrollFunc2Frame.Visible = false
 MainScrollFunc3Frame.Visible = false
@@ -652,18 +683,18 @@ Debug3.Value = "OK"
 MainHideButton.MouseButton1Click:Connect(function()
 	MYGUI.Main.Visible = false
 	WarnMessage("MultiYield hiden.")
-	Message("MultiYield", "MultiYield hiden.")
+	GuiMessage("MultiYield", "MultiYield hiden.")
 end)
 
 GUIOpenIcon.MouseButton1Click:Connect(function()
 	if MYGUI.Main.Visible == false then
 		MYGUI.Main.Visible = true
 		WarnMessage("MultiYield shown.")
-		Message("MultiYield", "MultiYield shown.")
+		GuiMessage("MultiYield", "MultiYield shown.")
 	elseif MYGUI.Main.Visible == true then
 		MYGUI.Main.Visible = false
 		WarnMessage("MultiYield hiden.")
-		Message("MultiYield", "MultiYield hiden.")
+		GuiMessage("MultiYield", "MultiYield hiden.")
 	end
 end)
 
@@ -752,17 +783,21 @@ MainScrollFunc7.MouseButton1Click:Connect(function()
 	MainScrollFunc7Frame.Visible = true
 end)
 
+MainScrollFunc6FrameRunB1.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 	GUIDestroyAnim()
 	MYGUI:Destroy()
 	MYFolder:Destroy()
 	WarnMessage("MultiYield destroyed.")
-	Message("MultiYield", "MultiYield Destroyed")
+	GuiMessage("MultiYield", "MultiYield Destroyed")
 	script:Destroy()
 end)
 MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	WarnMessage("MultiYield restarting...")
-	Message("MultiYield", "MultiYield restarting...")
+	GuiMessage("MultiYield", "MultiYield restarting...")
 	MYFolder.Core.CoreLoader.Parent = MYFolder
 	GUIDestroyAnim()
 	MYGUI:Destroy()
@@ -770,7 +805,7 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	MYFolder.Debug:Destroy()
 	MYFolder.Core:Destroy()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua"))()
-	Message("MultiYield", "MultiYield restarted!")
+	GuiMessage("MultiYield", "MultiYield restarted!")
 	WarnMessage("MultiYield restarted!")
 	script:Destroy()
 end)
@@ -780,9 +815,9 @@ Core.Value = "AMS_B_@nd_V_2"
 
 if MYFolder.Key.Value == "BodyParty" then
 	WarnMessage("MultiYield loaded!")
-	Message("MultiYield", "MultiYield loaded!")
+	GuiMessage("MultiYield", "MultiYield loaded!")
 else
-	Message("MultiYield", "Invalid Key")
+	GuiMessage("MultiYield", "Invalid Key")
 	MYFolder:Destroy()
 	MYGUI:Destroy()
 	error("Invalid Key")
