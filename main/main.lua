@@ -78,6 +78,18 @@ local Messages = Instance.new("Frame")
 local GUIOpenIcon = Instance.new("ImageButton")
 local GUIOpenIconUICorner = Instance.new("UICorner")
 
+
+--Functions
+function Message(Title, Text)
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = Title, Text = Text})
+end
+function WarnMessage(Message)
+	warn(Message)
+end
+function ErrorMessage(Message)
+	error(Message)
+end
+
 -------------------------------------------------------------------------------
 --Parameters
 Gui.Parent = PlayerGUI
@@ -640,19 +652,19 @@ Debug3.Value = "OK"
 --Functions
 MainHideButton.MouseButton1Click:Connect(function()
 	MYGUI.Main.Visible = false
-	warn("MultiYield hiden.")
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield hiden."})
+	WarnMessage("MultiYield hiden.")
+	Message("MultiYield", "MultiYield hiden.")
 end)
 
 GUIOpenIcon.MouseButton1Click:Connect(function()
 	if MYGUI.Main.Visible == false then
 		MYGUI.Main.Visible = true
-		warn("MultiYield shown.")
-		game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield shown."})
+		WarnMessage("MultiYield shown.")
+		Message("MultiYield", "MultiYield shown.")
 	elseif MYGUI.Main.Visible == true then
 		MYGUI.Main.Visible = false
-		warn("MultiYield hiden.")
-		game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield hiden."})
+		WarnMessage("MultiYield hiden.")
+		Message("MultiYield", "MultiYield hiden.")
 	end
 end)
 
@@ -745,22 +757,22 @@ MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 	GUIDestroyAnim()
 	MYGUI:Destroy()
 	MYFolder:Destroy()
-	warn("MultiYield destroyed.")
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield destroyed."})
+	WarnMessage("MultiYield destroyed.")
+	Message("MultiYield", "MultiYield Destroyed")
 	script:Destroy()
 end)
 MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
-	warn("MultiYield restarting...")
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield restarting..."})
-	game.ReplicatedStorage.MultiYield.Core.CoreLoader.Parent = game.ReplicatedStorage.MultiYield
+	WarnMessage("MultiYield restarting...")
+	Message("MultiYield", "MultiYield restarting...")
+	MYFolder.Core.CoreLoader.Parent = MYFolder
 	GUIDestroyAnim()
 	MYGUI:Destroy()
 	MYFolder.Main:Destroy()
 	MYFolder.Debug:Destroy()
 	MYFolder.Core:Destroy()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua"))()
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield restarted!"})
-	warn("MultiYield restarted!")
+	Message("MultiYield", "MultiYield restarted!")
+	WarnMessage("MultiYield restarted!")
 	script:Destroy()
 end)
 Debug4.Value = "OK"
@@ -768,12 +780,13 @@ Debug4.Value = "OK"
 Core.Value = "AMS_B_@nd_V_2"
 
 if MYFolder.Key.Value == "BodyParty" then
-	warn("MultiYield loaded!")
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Made by: nikr00n_dev!"})
+	WarnMessage("MultiYield loaded!")
+	Message("MultiYield", "MultiYield loaded!")
 else
+	Message("MultiYield", "Invalid Key")
 	MYFolder:Destroy()
 	MYGUI:Destroy()
-	error("Invalid Code")
+	ErrorMessage("Invalid Code")
 	script:Destroy()
 end
 Debug5.Value = "OK"
