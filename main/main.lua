@@ -4,8 +4,7 @@
 --game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
 warn("MultiYield loading...")
-loadstring(game:HttpGet("https://github.com/nikr00ndev/MultiYield/blob/main/api/api.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/core/core.lua"))()
+
 -------------------------------------------------------------------------------
 --Locals
 local LocalPlayer = game.Players.LocalPlayer
@@ -664,7 +663,6 @@ MainScrollFunc1.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
-	warn("Func1")
 end)
 MainScrollFunc2.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -677,7 +675,6 @@ MainScrollFunc2.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
-	warn("Func2")
 end)
 MainScrollFunc3.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -690,7 +687,6 @@ MainScrollFunc3.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
-	warn("Func3")
 end)
 MainScrollFunc4.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -703,7 +699,6 @@ MainScrollFunc4.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
-	warn("Func4")
 end)
 MainScrollFunc5.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -716,7 +711,6 @@ MainScrollFunc5.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = true
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
-	warn("Func5")
 end)
 MainScrollFunc6.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -729,7 +723,6 @@ MainScrollFunc6.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = true
 	MainScrollFunc7Frame.Visible = false
-	warn("Func6")
 end)
 MainScrollFunc7.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -742,7 +735,6 @@ MainScrollFunc7.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = true
-	warn("Func7")
 end)
 
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
@@ -765,6 +757,7 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	script:Destroy()
 end)
 Debug4.Value = "OK"
+
 Core.Value = "AMS_B_@nd_V_2"
 
 if MYFolder.Key.Value == "BodyParty" then
