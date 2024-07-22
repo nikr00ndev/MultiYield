@@ -4,6 +4,7 @@
 --game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
 warn("MultiYield loading...")
+loadstring(game:HttpGet("https://github.com/nikr00ndev/MultiYield/blob/main/api/api.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/core/core.lua"))()
 -------------------------------------------------------------------------------
 --Locals
