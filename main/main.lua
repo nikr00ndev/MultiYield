@@ -641,6 +641,7 @@ Debug3.Value = "OK"
 MainHideButton.MouseButton1Click:Connect(function()
 	MYGUI.Main.Visible = false
 	warn("MultiYield hiden.")
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield hiden."})
 end)
 
 GUIOpenIcon.MouseButton1Click:Connect(function()
