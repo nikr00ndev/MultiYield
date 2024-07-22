@@ -3,6 +3,7 @@
 warn("MultiYield Loader loading...")
 
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "Made by: nikr00n_dev!"})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "MultiYield Loader Loading..."})
 
 --Locals
 local Gui = Instance.new("ScreenGui")
@@ -184,6 +185,7 @@ DestroyButton.MouseButton1Click:Connect(function()
 	game.ReplicatedStorage.MultiYield:Destroy()
 	GUIDestroyAnim()
 	game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "MultiYield Loader Destroyed."})
 	warn("MultiYield Loader Destroyed")
 end)
 CheckKey.MouseButton1Click:Connect(function()
@@ -199,3 +201,4 @@ end)
 
 warn("MultiYield Loader loaded!")
 Core.Value = "true_V_2"
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "Loaded!"})
