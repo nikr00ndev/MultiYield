@@ -3,12 +3,12 @@
 --Notes
 --game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
+function Message(Title, Text)
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = Title, Text = Text})
+end
+
 warn("MultiYield loading...")
-
---game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Loading..."})
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/core/core.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/api/api.lua"))()
+Message("MultiYield", "Loading...")
 
 -------------------------------------------------------------------------------
 --Locals
@@ -89,9 +89,7 @@ end
 function WarnMessage(Message)
 	warn(Message)
 end
-function ErrorMessage(Message)
-	error(Message)
-end
+
 -------------------------------------------------------------------------------
 --Parameters
 Gui.Parent = PlayerGUI
@@ -787,7 +785,7 @@ else
 	Message("MultiYield", "Invalid Key")
 	MYFolder:Destroy()
 	MYGUI:Destroy()
-	ErrorMessage("Invalid Code")
+	error("Invalid Key")
 	script:Destroy()
 end
 Debug5.Value = "OK"
