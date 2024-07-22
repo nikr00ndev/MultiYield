@@ -4,7 +4,8 @@
 --game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
 warn("MultiYield loading...")
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield loading..."})
+
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Loading..."})
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/core/core.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/api/api.lua"))()
@@ -16,7 +17,6 @@ local PlayerGUI = LocalPlayer.PlayerGui
 local PlayerBackpack = LocalPlayer.Backpack
 local ReplicatedStorage = game.ReplicatedStorage
 local MYFolder = game.ReplicatedStorage.MultiYield
-
 local Gui = Instance.new("ScreenGui")
 local DebugFolder = Instance.new("Folder")
 local Debug1 = Instance.new("StringValue")
@@ -92,7 +92,6 @@ end
 function ErrorMessage(Message)
 	error(Message)
 end
-
 -------------------------------------------------------------------------------
 --Parameters
 Gui.Parent = PlayerGUI
@@ -123,7 +122,6 @@ Debug4.Name = "Debug4"
 Debug5.Name = "Debug5"
 Debug1.Value = "OK"
 CoreLoader.Parent = CoreFolder
-
 
 Main.Parent = Gui
 Main.Name = "Main"
