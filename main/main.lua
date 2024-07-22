@@ -6,6 +6,9 @@
 warn("MultiYield loading...")
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield loading..."})
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/core/core.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/api/api.lua"))()
+
 -------------------------------------------------------------------------------
 --Locals
 local LocalPlayer = game.Players.LocalPlayer
