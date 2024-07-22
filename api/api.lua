@@ -2,6 +2,7 @@
 
 local core = Instance.new("StringValue")
 core.Parent = game.ReplicatedStorage.MultiYield.Core
+core.Name = "CoreAPI"
 
 
 if game.ReplicatedStorage.MultiYield.Key.Value == "BodyParty" then
