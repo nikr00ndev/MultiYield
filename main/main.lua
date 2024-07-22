@@ -646,9 +646,11 @@ GUIOpenIcon.MouseButton1Click:Connect(function()
 	if MYGUI.Main.Visible == false then
 		MYGUI.Main.Visible = true
 		warn("MultiYield shown.")
+		game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield shown."})
 	elseif MYGUI.Main.Visible == true then
 		MYGUI.Main.Visible = false
 		warn("MultiYield hiden.")
+		game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield hiden."})
 	end
 end)
 
@@ -742,10 +744,12 @@ MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 	MYGUI:Destroy()
 	MYFolder:Destroy()
 	warn("MultiYield destroyed.")
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield destroyed."})
 	script:Destroy()
 end)
 MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
-	warn("MultiYield restarting.")
+	warn("MultiYield restarting...")
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield restarting..."})
 	game.ReplicatedStorage.MultiYield.Core.CoreLoader.Parent = game.ReplicatedStorage.MultiYield
 	GUIDestroyAnim()
 	MYGUI:Destroy()
@@ -753,6 +757,7 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	MYFolder.Debug:Destroy()
 	MYFolder.Core:Destroy()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua"))()
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield restarted!"})
 	warn("MultiYield restarted!")
 	script:Destroy()
 end)
