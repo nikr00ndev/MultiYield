@@ -5,7 +5,7 @@
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
 warn("MultiYield loading...")
 
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Loading..."})
+--game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "Loading..."})
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/core/core.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/api/api.lua"))()
