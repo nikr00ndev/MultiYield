@@ -4,6 +4,7 @@
 --game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
 --loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
 warn("MultiYield loading...")
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield", Text = "MultiYield loading..."})
 
 -------------------------------------------------------------------------------
 --Locals
