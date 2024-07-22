@@ -516,7 +516,6 @@ MainScrollFunc6FrameRunB2.TextScaled = true
 MainScrollFunc6FrameRunB2.TextSize = "14"
 MainScrollFunc6FrameRunB2UICorner.Parent = MainScrollFunc6FrameRunB2
 MainScrollFunc6FrameRunB2UICorner.CornerRadius = UDim.new(0, 11)
-
 MainScrollFunc1Frame.Visible = false
 MainScrollFunc2Frame.Visible = false
 MainScrollFunc3Frame.Visible = false
