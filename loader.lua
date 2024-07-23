@@ -2,8 +2,8 @@
 
 warn("MultiYield KeySystem loading...")
 
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Keysystem", Text = "Made by: nikr00n_dev!"})
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "MultiYield Loader Loading..."})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield KeySystem", Text = "Made by: nikr00n_dev!"})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield KeySystem", Text = "MultiYield KeySystem Loading..."})
 
 --Locals
 local Gui = Instance.new("ScreenGui")
@@ -23,7 +23,7 @@ local MainFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
 
 --Parameters
-Gui.Name = "MultiYieldLoader"
+Gui.Name = "MultiYieldKeySystem"
 Gui.Parent = game.Players.LocalPlayer.PlayerGui
 Gui.ResetOnSpawn = false
 Frame.Name = "Main"
@@ -99,7 +99,7 @@ Name.Size = UDim2.new(0, 200,0, 22)
 Name.Font = Enum.Font.SourceSansBold
 Name.FontFace.Bold = true
 Name.RichText = true
-Name.Text = "MultiYield Loader"
+Name.Text = "MultiYield KeySystem"
 Name.TextColor3 = Color3.new(1, 1, 1)
 Name.TextScaled = true
 Name.TextSize = "14"
@@ -185,8 +185,8 @@ DestroyButton.MouseButton1Click:Connect(function()
 	game.ReplicatedStorage.MultiYield:Destroy()
 	GUIDestroyAnim()
 	game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "MultiYield Loader Destroyed."})
-	warn("MultiYield Loader Destroyed")
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield KeySystem", Text = "MultiYield KeySystem Destroyed."})
+	warn("MultiYield KeySystem Destroyed")
 end)
 CheckKey.MouseButton1Click:Connect(function()
 	if KeyEnter.Text == Key then
@@ -199,6 +199,6 @@ CheckKey.MouseButton1Click:Connect(function()
 end)
 
 
-warn("MultiYield Loader loaded!")
+warn("MultiYield KeySystem loaded!")
 Core.Value = "true_V_2"
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "Loaded!"})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield KeySystem", Text = "Loaded!"})
