@@ -48,6 +48,8 @@ local MainScrollFunc6 = Instance.new("TextButton")
 local MainScrollFunc6UICorner = Instance.new("UICorner")
 local MainScrollFunc7 = Instance.new("TextButton")
 local MainScrollFunc7UICorner = Instance.new("UICorner")
+local MainScrollFunc8 = Instance.new("TextButton")
+local MainScrollFunc8UICorner = Instance.new("UICorner")
 local MainScrollFunc1Frame = Instance.new("Frame")
 local MainScrollFunc2Frame = Instance.new("Frame")
 local MainScrollFunc3Frame = Instance.new("Frame")
@@ -55,6 +57,7 @@ local MainScrollFunc4Frame = Instance.new("Frame")
 local MainScrollFunc5Frame = Instance.new("Frame")
 local MainScrollFunc6Frame = Instance.new("Frame")
 local MainScrollFunc7Frame = Instance.new("Frame")
+local MainScrollFunc8Frame = Instance.new("Frame")
 local MainScrollFunc4FrameFunc1 = Instance.new("TextButton")
 local MainScrollFunc4FrameFunc1UICORNER = Instance.new("UICorner")
 local MainScrollFunc4FrameFunc2 = Instance.new("TextButton")
@@ -67,12 +70,10 @@ local MainScrollFunc3FrameCategory = Instance.new("TextLabel")
 local MainScrollFunc5FrameCategory = Instance.new("TextLabel")
 local MainScrollFunc6FrameCategory = Instance.new("TextLabel")
 local MainScrollFunc7FrameCategory = Instance.new("TextLabel")
+local MainScrollFunc8FrameCategory = Instance.new("TextLabel")
 local MainScrollFunc6FrameText1 = Instance.new("TextLabel")
 local MainScrollFunc6FrameRunB1 = Instance.new("TextButton")
 local MainScrollFunc6FrameRunB1UICorner = Instance.new("UICorner")
-local MainScrollFunc6FrameText2 = Instance.new("TextLabel")
-local MainScrollFunc6FrameRunB2 = Instance.new("TextButton")
-local MainScrollFunc6FrameRunB2UICorner = Instance.new("UICorner")
 local MainScrollFuncStart = Instance.new("Frame")
 local MainScrollFuncStartImage = Instance.new("ImageLabel")
 local MainScrollFuncStartImageUICorner = Instance.new("UICorner")
@@ -276,6 +277,20 @@ MainScrollFunc7.TextScaled = true
 MainScrollFunc7.Text = "Scripts"
 MainScrollFunc7UICorner.Parent = MainScrollFunc7
 MainScrollFunc7UICorner.CornerRadius = UDim.new(0, 8)
+MainScrollFunc8.Parent = MainScrolling
+MainScrollFunc8.Name = "Tracers"
+MainScrollFunc8.Position = UDim2.new(0.142, 0,0.223, 0)
+MainScrollFunc8.Size = UDim2.new(0, 86,0, 25)
+MainScrollFunc8.BorderSizePixel = "0"
+MainScrollFunc8.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc8.Font = Enum.Font.SourceSansBold
+MainScrollFunc8.TextSize = "14"
+MainScrollFunc8.FontFace.Bold = true
+MainScrollFunc8.RichText = true
+MainScrollFunc8.TextScaled = true
+MainScrollFunc8.Text = "Tracers"
+MainScrollFunc8UICorner.Parent = MainScrollFunc8
+MainScrollFunc8UICorner.CornerRadius = UDim.new(0, 8)
 MainScrollFunc1Frame.Parent = MainFunction
 MainScrollFunc1Frame.Name = "Aimbot"
 MainScrollFunc1Frame.BackgroundTransparency = "1"
@@ -318,6 +333,12 @@ MainScrollFunc7Frame.BackgroundTransparency = "1"
 MainScrollFunc7Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
 MainScrollFunc7Frame.Size = UDim2.new(0, 495,0, 308)
 MainScrollFunc7Frame.Visible = false
+MainScrollFunc8Frame.Parent = MainFunction
+MainScrollFunc8Frame.Name = "Tracers"
+MainScrollFunc8Frame.BackgroundTransparency = "1"
+MainScrollFunc8Frame.Position = UDim2.new(-0.001, 0,0.002, 0)
+MainScrollFunc8Frame.Size = UDim2.new(0, 495,0, 308)
+MainScrollFunc8Frame.Visible = false
 MainScrollFunc4FrameFunc1.Parent = MainFunction.Settings
 MainScrollFunc4FrameFunc1.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc4FrameFunc1.BorderSizePixel = "0"
@@ -460,6 +481,20 @@ MainScrollFunc7FrameCategory.TextColor3 = Color3.new(1, 1, 1)
 MainScrollFunc7FrameCategory.TextScaled = true
 MainScrollFunc7FrameCategory.TextSize = "14"
 MainScrollFunc7FrameCategory.TextXAlignment = "Left"
+MainScrollFunc8FrameCategory.Parent = MainFunction.Tracers
+MainScrollFunc8FrameCategory.Name = "Tracers"
+MainScrollFunc8FrameCategory.BackgroundTransparency = "1"
+MainScrollFunc8FrameCategory.BorderSizePixel = "0"
+MainScrollFunc8FrameCategory.Position = UDim2.new(0, 0,-0.055, 0)
+MainScrollFunc8FrameCategory.Size = UDim2.new(0, 200,0, 23)
+MainScrollFunc8FrameCategory.Font = Enum.Font.SourceSansBold
+MainScrollFunc8FrameCategory.FontFace.Bold = true
+MainScrollFunc8FrameCategory.RichText = true
+MainScrollFunc8FrameCategory.Text = "Tracers"
+MainScrollFunc8FrameCategory.TextColor3 = Color3.new(1, 1, 1)
+MainScrollFunc8FrameCategory.TextScaled = true
+MainScrollFunc8FrameCategory.TextSize = "14"
+MainScrollFunc8FrameCategory.TextXAlignment = "Left"
 MainScrollFunc6FrameText1.Parent = MainFunction.Scripts
 MainScrollFunc6FrameText1.Name = "InfYield"
 MainScrollFunc6FrameText1.BackgroundTransparency = "1"
@@ -488,34 +523,6 @@ MainScrollFunc6FrameRunB1.TextScaled = true
 MainScrollFunc6FrameRunB1.TextSize = "14"
 MainScrollFunc6FrameRunB1UICorner.Parent = MainScrollFunc6FrameRunB1
 MainScrollFunc6FrameRunB1UICorner.CornerRadius = UDim.new(0, 11)
-MainScrollFunc6FrameText2.Parent = MainFunction.Scripts
-MainScrollFunc6FrameText2.Name = "DeleteMob"
-MainScrollFunc6FrameText2.BackgroundTransparency = "1"
-MainScrollFunc6FrameText2.BorderSizePixel = "0"
-MainScrollFunc6FrameText2.Position = UDim2.new(0.022, 0,0.198, 0)
-MainScrollFunc6FrameText2.Size = UDim2.new(0, 360,0, 33)
-MainScrollFunc6FrameText2.Font = Enum.Font.SourceSansBold
-MainScrollFunc6FrameText2.FontFace.Bold = true
-MainScrollFunc6FrameText2.RichText = true
-MainScrollFunc6FrameText2.Text = "DeleteMob | Cheat Engine"
-MainScrollFunc6FrameText2.TextColor3 = Color3.new(1, 1, 1)
-MainScrollFunc6FrameText2.TextScaled = true
-MainScrollFunc6FrameText2.TextSize = "14"
-MainScrollFunc6FrameRunB2.Parent = MainFunction.Scripts
-MainScrollFunc6FrameRunB2.Name = "DeleteMobRun"
-MainScrollFunc6FrameRunB2.BackgroundColor3 = Color3.new(1, 0, 0)
-MainScrollFunc6FrameRunB2.BorderSizePixel = "0"
-MainScrollFunc6FrameRunB2.Position = UDim2.new(0.749, 0,0.198, 0)
-MainScrollFunc6FrameRunB2.Size = UDim2.new(0, 113,0, 33)
-MainScrollFunc6FrameRunB2.Font = Enum.Font.SourceSansBold
-MainScrollFunc6FrameRunB2.FontFace.Bold = true
-MainScrollFunc6FrameRunB2.RichText = true
-MainScrollFunc6FrameRunB2.Text = "RUN"
-MainScrollFunc6FrameRunB2.TextColor3 = Color3.new(0, 0, 0)
-MainScrollFunc6FrameRunB2.TextScaled = true
-MainScrollFunc6FrameRunB2.TextSize = "14"
-MainScrollFunc6FrameRunB2UICorner.Parent = MainScrollFunc6FrameRunB2
-MainScrollFunc6FrameRunB2UICorner.CornerRadius = UDim.new(0, 11)
 MainScrollFunc1Frame.Visible = false
 MainScrollFunc2Frame.Visible = false
 MainScrollFunc3Frame.Visible = false
@@ -740,6 +747,7 @@ MainScrollFunc1.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
+	MainScrollFunc8Frame.Visible = false
 end)
 MainScrollFunc2.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -752,6 +760,7 @@ MainScrollFunc2.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
+	MainScrollFunc8Frame.Visible = false
 end)
 MainScrollFunc3.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -764,6 +773,7 @@ MainScrollFunc3.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
+	MainScrollFunc8Frame.Visible = false
 end)
 MainScrollFunc4.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -776,6 +786,7 @@ MainScrollFunc4.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
+	MainScrollFunc8Frame.Visible = false
 end)
 MainScrollFunc5.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -788,6 +799,7 @@ MainScrollFunc5.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = true
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = false
+	MainScrollFunc8Frame.Visible = false
 end)
 MainScrollFunc6.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -800,6 +812,7 @@ MainScrollFunc6.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = true
 	MainScrollFunc7Frame.Visible = false
+	MainScrollFunc8Frame.Visible = false
 end)
 MainScrollFunc7.MouseButton1Click:Connect(function()
 	if MainScrollFuncStart.Visible == true then
@@ -812,20 +825,35 @@ MainScrollFunc7.MouseButton1Click:Connect(function()
 	MainScrollFunc5Frame.Visible = false
 	MainScrollFunc6Frame.Visible = false
 	MainScrollFunc7Frame.Visible = true
+	MainScrollFunc8Frame.Visible = false
+end)
+MainScrollFunc8.MouseButton1Click:Connect(function()
+	if MainScrollFuncStart.Visible == true then
+		MainScrollFuncStart.Visible = false
+	end
+	MainScrollFunc1Frame.Visible = false
+	MainScrollFunc2Frame.Visible = false
+	MainScrollFunc3Frame.Visible = false
+	MainScrollFunc4Frame.Visible = false
+	MainScrollFunc5Frame.Visible = false
+	MainScrollFunc6Frame.Visible = false
+	MainScrollFunc7Frame.Visible = false
+	MainScrollFunc8Frame.Visible = true
 end)
 
 MainScrollFunc6FrameRunB1.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
-MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
-	-- Yes, I know This Is Shit.
+
+-------------------------------------------------------------------------------
+-- Aimbot, ESP
+function aimbotespload()
 	local PLAYER = game.Players.LocalPlayer
 	local CurrentCam  = game.Workspace.CurrentCamera
 	local UIS = game:GetService("UserInputService")-- Made By Mick Gordon
 	local WorldToViewportPoint = CurrentCam.WorldToViewportPoint
 	local mouseLocation = UIS.GetMouseLocation
 
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Made By Mick Gordon", Text = "Enjoy !"})
 
 	local DeleteMob ={
 		GUi = {
@@ -891,7 +919,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	local TracersG = Instance.new("ScreenGui")TracersG.Name = "Tracers" TracersG.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui") TracersG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling TracersG.ResetOnSpawn = false
 	local FOVFFrame = Instance.new("Frame")FOVFFrame.Parent = Fov FOVFFrame.Name = "FOVFFrame" FOVFFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255) FOVFFrame.BorderColor3 = Color3.fromRGB(0, 0, 0) FOVFFrame.BorderSizePixel = 0 FOVFFrame.BackgroundTransparency = 1 FOVFFrame.AnchorPoint = Vector2.new(0.5, 0.5) FOVFFrame.Position = UDim2.new(0.5, 0,0.5, 0) FOVFFrame.Size = UDim2.new(0, DeleteMob.Aimbot.Fov, 0, DeleteMob.Aimbot.Fov) FOVFFrame.BackgroundTransparency = 1 
 	local UICorner = Instance.new("UICorner")UICorner.CornerRadius = UDim.new(1, 0) UICorner.Parent = FOVFFrame -- Made By Mick Gordon
-	local UIStroke = Instance.new("UIStroke")UIStroke.Color = Color3.fromRGB(100,0,100) UIStroke.Parent = FOVFFrame UIStroke.Thickness = 1 UIStroke.ApplyStrokeMode = "Border" game:GetService("StarterGui"):SetCore("SendNotification", {Title = "https://discord.gg/FsApQ7YNTq", Text = "The Discord For More!"})
+	local UIStroke = Instance.new("UIStroke")UIStroke.Color = Color3.fromRGB(100,0,100) UIStroke.Parent = FOVFFrame UIStroke.Thickness = 1 UIStroke.ApplyStrokeMode = "Border"
 	local BoxC = Instance.new("ScreenGui", game.Workspace) BoxC.Name = "Box"
 	local Higlight = Instance.new("ScreenGui",game.Workspace)
 	local connections = {}
@@ -1262,12 +1290,6 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	end
 
 	-- Cant Be Botherd To Clean This Up
-	local CheatEngineDeleteMob = Instance.new("ScreenGui")
-	local DeleteMobF = Instance.new("Frame")
-	local TextBox = Instance.new("TextBox")
-	local Name = Instance.new("TextLabel")
-	local Line = Instance.new("Frame")
-	local Line_2 = Instance.new("Frame")
 	local AimBotSection = Instance.new("Frame")
 	local UIListLayout = Instance.new("UIListLayout")
 	local ABE = Instance.new("TextButton")
@@ -1360,78 +1382,16 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	local UIListLayout_9 = Instance.new("UIListLayout")
 	local TextLabel_13 = Instance.new("TextLabel")
 	local TextLabel_14 = Instance.new("TextLabel")
-	local Open = Instance.new("Frame")
-	local TextButton = Instance.new("TextButton")
 
-	--Properties:
 
-	CheatEngineDeleteMob.Name = "CheatEngineDeleteMob"
-	CheatEngineDeleteMob.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	CheatEngineDeleteMob.Enabled = true
-	CheatEngineDeleteMob.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	CheatEngineDeleteMob.DisplayOrder = 10
-	CheatEngineDeleteMob.ResetOnSpawn = false
-	-- Made By Mick Gordon
-	DeleteMobF.Name = "DeleteMobF"
-	DeleteMobF.Parent = CheatEngineDeleteMob
-	DeleteMobF.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
-	DeleteMobF.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	DeleteMobF.Position = UDim2.new(0.144998878, 0, 0.328040659, 0)
-	DeleteMobF.Size = UDim2.new(0, 1213, 0, 398)
-	DeleteMobF.ZIndex = 10
-	DeleteMobF.Draggable = true
-	DeleteMobF.Active = true
-
-	TextBox.Parent = DeleteMobF
-	TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextBox.BackgroundTransparency = 1.000
-	TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	TextBox.BorderSizePixel = 0
-	TextBox.Position = UDim2.new(0.791149139, 0, 0.0127403988, 0)
-	TextBox.Size = UDim2.new(0, 200, 0, 23)
-	TextBox.ClearTextOnFocus = false
-	TextBox.Font = Enum.Font.Roboto
-	TextBox.PlaceholderText = "https://discord.gg/FsApQ7YNTq"
-	TextBox.Text = "https://discord.gg/FsApQ7YNTq - Double Click Me"
-	TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TextBox.TextSize = 14.000
-
-	Name.Name = "Name"
-	Name.Parent = DeleteMobF
-	Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Name.BackgroundTransparency = 1.000
-	Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Name.BorderSizePixel = 0
-	Name.Position = UDim2.new(0.0178597774, 0, 0.00456260797, 0)
-	Name.Size = UDim2.new(0, 200, 0, 31)
-	Name.Font = Enum.Font.Gotham
-	Name.Text = "DeleteMob | Cheat Engine"
-	Name.TextColor3 = Color3.fromRGB(17, 223, 255)
-	Name.TextSize = 19.000
-
-	Line.Name = "Line"
-	Line.Parent = DeleteMobF
-	Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Line.BorderSizePixel = 0
-	Line.Position = UDim2.new(0, 0, 0.0804020092, 0)
-	Line.Size = UDim2.new(0, 1213, 0, 1)
-
-	Line_2.Name = "Line"
-	Line_2.Parent = DeleteMobF
-	Line_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Line_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Line_2.BorderSizePixel = 0
-	Line_2.Position = UDim2.new(0.205276027, 0, 0.0828348249, 0)
-	Line_2.Size = UDim2.new(0, 1, 0, 365)
 	-- Made By Mick Gordon
 	AimBotSection.Name = "AimBotSection"
-	AimBotSection.Parent = DeleteMobF
+	AimBotSection.Parent = MainScrollFunc1Frame
 	AimBotSection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	AimBotSection.BackgroundTransparency = 1.000
 	AimBotSection.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	AimBotSection.BorderSizePixel = 0
-	AimBotSection.Position = UDim2.new(0.0604648069, 0, 0.160724282, 0)
+	AimBotSection.Position = UDim2.new(0.3, 0,0.01, 0)
 	AimBotSection.Size = UDim2.new(0, 100, 0, 334)
 
 	UIListLayout.Parent = AimBotSection
@@ -1642,26 +1602,13 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	Allways_Show.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Allways_Show.TextSize = 16.000
 
-	TextLabel_4.Parent = DeleteMobF
-	TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_4.BackgroundTransparency = 1.000
-	TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	TextLabel_4.BorderSizePixel = 0
-	TextLabel_4.Position = UDim2.new(0.00569662312, 0, 0.100655407, 0)
-	TextLabel_4.Size = UDim2.new(0, 100, 0, 17)
-	TextLabel_4.Font = Enum.Font.Gotham
-	TextLabel_4.Text = "Aim Bot"
-	TextLabel_4.TextColor3 = Color3.fromRGB(17, 223, 255)
-	TextLabel_4.TextSize = 18.000
-	TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
-
 	ESPSection.Name = "ESPSection"
-	ESPSection.Parent = DeleteMobF
+	ESPSection.Parent = MainScrollFunc3Frame
 	ESPSection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	ESPSection.BackgroundTransparency = 1.000
 	ESPSection.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	ESPSection.BorderSizePixel = 0
-	ESPSection.Position = UDim2.new(0.26986298, 0, 0.160724282, 0)
+	ESPSection.Position = UDim2.new(0.1, 0,0.01, 0)
 	ESPSection.Size = UDim2.new(0, 100, 0, 334)
 	-- Made By Mick Gordon
 	UIListLayout_2.Parent = ESPSection
@@ -1674,7 +1621,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	BBE.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 	BBE.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	BBE.Position = UDim2.new(0.234439835, 0, 0.139479905, 0)
-	BBE.Size = UDim2.new(0, 164, 0, 29)
+	BBE.Size = UDim2.new(0, 100, 0, 25)
 	BBE.Font = Enum.Font.Gotham
 	BBE.Text = "Box"
 	BBE.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1685,7 +1632,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	BBN.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 	BBN.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	BBN.Position = UDim2.new(0.234439835, 0, 0.139479905, 0)
-	BBN.Size = UDim2.new(0, 164, 0, 29)
+	BBN.Size = UDim2.new(0, 100, 0, 25)
 	BBN.Font = Enum.Font.Gotham
 	BBN.Text = "Name"
 	BBN.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1696,7 +1643,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	BBD.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 	BBD.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	BBD.Position = UDim2.new(0.234439835, 0, 0.139479905, 0)
-	BBD.Size = UDim2.new(0, 164, 0, 29)
+	BBD.Size = UDim2.new(0, 100, 0, 25)
 	BBD.Font = Enum.Font.Gotham
 	BBD.Text = "Distance"
 	BBD.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1707,7 +1654,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	BBH.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 	BBH.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	BBH.Position = UDim2.new(0.234439835, 0, 0.139479905, 0)
-	BBH.Size = UDim2.new(0, 164, 0, 29)
+	BBH.Size = UDim2.new(0, 100, 0, 25)
 	BBH.Font = Enum.Font.Gotham
 	BBH.Text = "Health"
 	BBH.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1718,7 +1665,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	BTC.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 	BTC.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	BTC.Position = UDim2.new(0.234439835, 0, 0.139479905, 0)
-	BTC.Size = UDim2.new(0, 164, 0, 29)
+	BTC.Size = UDim2.new(0, 100, 0, 25)
 	BTC.Font = Enum.Font.Gotham
 	BTC.Text = "Team Check"
 	BTC.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1741,7 +1688,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	BBHT.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 	BBHT.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	BBHT.Position = UDim2.new(0.234439835, 0, 0.139479905, 0)
-	BBHT.Size = UDim2.new(0, 164, 0, 29)
+	BBHT.Size = UDim2.new(0, 100, 0, 25)
 	BBHT.Font = Enum.Font.Gotham
 	BBHT.Text = "BAR, text, both"
 	BBHT.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1821,26 +1768,13 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	Box_B.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Box_B.TextSize = 14.000
 
-	TextLabel_8.Parent = DeleteMobF
-	TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_8.BackgroundTransparency = 1.000
-	TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	TextLabel_8.BorderSizePixel = 0
-	TextLabel_8.Position = UDim2.new(0.215919182, 0, 0.100655407, 0)
-	TextLabel_8.Size = UDim2.new(0, 100, 0, 17)
-	TextLabel_8.Font = Enum.Font.Gotham
-	TextLabel_8.Text = "ESP"
-	TextLabel_8.TextColor3 = Color3.fromRGB(17, 223, 255)
-	TextLabel_8.TextSize = 18.000
-	TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
-
 	ESPSection_2.Name = "ESPSection"
-	ESPSection_2.Parent = DeleteMobF
+	ESPSection_2.Parent = MainScrollFunc3Frame
 	ESPSection_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	ESPSection_2.BackgroundTransparency = 1.000
 	ESPSection_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	ESPSection_2.BorderSizePixel = 0
-	ESPSection_2.Position = UDim2.new(0.475963563, 0, 0.160724282, 0)
+	ESPSection_2.Position = UDim2.new(0.6, 0,0.01, 0)
 	ESPSection_2.Size = UDim2.new(0, 100, 0, 334)
 
 	UIListLayout_4.Parent = ESPSection_2
@@ -2131,12 +2065,12 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	FillOutlines_B.TextSize = 14.000
 	-- Made By Mick Gordon
 	Tracerssection.Name = "Tracers section"
-	Tracerssection.Parent = DeleteMobF
+	Tracerssection.Parent = MainScrollFunc8Frame
 	Tracerssection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Tracerssection.BackgroundTransparency = 1.000
 	Tracerssection.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Tracerssection.BorderSizePixel = 0
-	Tracerssection.Position = UDim2.new(0.682779849, 0, 0.158000082, 0)
+	Tracerssection.Position = UDim2.new(0.38, 0,0.16, 0)
 	Tracerssection.Size = UDim2.new(0, 100, 0, 334)
 
 	UIListLayout_7.Parent = Tracerssection
@@ -2264,27 +2198,6 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	TextLabel_14.Text = "Later"
 	TextLabel_14.TextColor3 = Color3.fromRGB(17, 223, 255)
 	TextLabel_14.TextSize = 18.000
-
-	Open.Name = "Open"
-	Open.Parent = CheatEngineDeleteMob
-	Open.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
-	Open.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	Open.Position = UDim2.new(0.5, 0, 0.0199999996, 0)
-	Open.Size = UDim2.new(0, 150, 0, 50)
-	Open.ZIndex = 10
-	Open.Visible = DeleteMob.GUi.OpenNCloseButton
-	Open.Draggable = true
-	Open.Active = true
-
-	TextButton.Parent = Open
-	TextButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-	TextButton.BorderColor3 = Color3.fromRGB(255, 255, 255)
-	TextButton.Position = UDim2.new(0, 0, 0.319999933, 0)
-	TextButton.Size = UDim2.new(0, 150, 0, 34)
-	TextButton.Font = Enum.Font.Gotham
-	TextButton.Text = "open / Close"
-	TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TextButton.TextSize = 14.000
 
 	PLAYER:GetMouse().KeyDown:Connect(function(KeyPressed) -- What The Fuck
 		if KeyPressed == (DeleteMob.GUi.Keybind) and DeleteMob.GUi.KeybindEnable then
@@ -2495,14 +2408,6 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 	end)
 
 	-- UI Toggle
-
-	TextButton.MouseButton1Click:Connect(function()
-		if DeleteMobF.Visible == true then
-			DeleteMobF.Visible = false
-		else
-			DeleteMobF.Visible = true
-		end
-	end)
 
 
 	-- Scripts:
@@ -2758,7 +2663,7 @@ MainScrollFunc6FrameRunB2.MouseButton1Click:Connect(function()
 		AddBox(plr)
 		AddTracers(plr)
 	end)
-end)
+end
 
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 	GUIDestroyAnim()
@@ -2796,5 +2701,7 @@ else
 	error("Invalid Key")
 	script:Destroy()
 end
+
+aimbotespload()
 Debug5.Value = "OK"
 CoreMain.Value = "AMS_B_@nd_C_B_V_4"
