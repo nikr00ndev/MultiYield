@@ -2,7 +2,7 @@
 
 warn("MultiYield Loader loading...")
 
-if game.ReplicatedStorage:FindFirstChild("MultiYield"):FindFirstChild("MY_LOADED") then
+if game.ReplicatedStorage:FindFirstChild("MY_LOADED") then
 	warn("sigma kriper")
 end
 
