@@ -2,10 +2,6 @@
 
 warn("MultiYield Loader loading...")
 
-if game.ReplicatedStorage:FindFirstChild("MY_LOADED") then
-	error("MultiYield Loaded")
-end
-
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "Made by: nikr00n_dev!"})
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "MultiYield Loader Loading..."})
 
