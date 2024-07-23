@@ -60,16 +60,21 @@ local MainScrollFunc7Frame = Instance.new("Frame")
 local MainScrollFunc8Frame = Instance.new("Frame")
 local MainScrollFunc2FrameLine = Instance.new("Frame")
 local MainScrollFunc2FrameLine2 = Instance.new("Frame")
+local MainScrollFunc2FrameLine3 = Instance.new("Frame")
 local MainScrollFunc2FrameNoclipCategory = Instance.new("Frame")
 local MainScrollFunc2FrameFlyCategory = Instance.new("Frame")
 local MainScrollFunc2FramePlayerCategory = Instance.new("Frame")
 local MainScrollFunc2FrameNoclipCategoryEnableButton = Instance.new("TextButton")
 local MainScrollFunc2FrameNoclipCategoryEnableButtonUICorner = Instance.new("UICorner")
+local MainScrollFunc2FrameBTools = Instance.new("TextButton")
+local MainScrollFunc2FrameFullBright = Instance.new("TextButton")
 local MainScrollFunc2FrameNoclipCategoryText = Instance.new("TextLabel")
 local MainScrollFunc2FrameFlyCategorySpeedEnter = Instance.new("TextBox")
 local MainScrollFunc2FrameFlyCategorySpeedEnterUICorner = Instance.new("UICorner")
 local MainScrollFunc2FrameFlyCategoryEnableButton = Instance.new("TextButton")
 local MainScrollFunc2FrameFlyCategoryEnableButtonUICorner = Instance.new("UICorner")
+local MainScrollFunc2FrameBToolsUICorner = Instance.new("UICorner")
+local MainScrollFunc2FrameFullBrightUICorner = Instance.new("UICorner")
 local MainScrollFunc2FrameFlyCategoryText = Instance.new("TextLabel")
 local MainScrollFunc2FramePlayerCategoryTextWalk = Instance.new("TextLabel")
 local MainScrollFunc2FramePlayerCategoryTextJump = Instance.new("TextLabel")
@@ -429,7 +434,13 @@ MainScrollFunc2FrameLine2.Position = UDim2.new(0, 0,0.46, 0)
 MainScrollFunc2FrameLine2.Size = UDim2.new(0, 494,0, 1)
 MainScrollFunc2FrameLine2.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc2FrameLine2.BorderSizePixel = "0"
-MainScrollFunc2FrameLine2.Name = "Line2"
+MainScrollFunc2FrameLine2.Name = "Line3"
+MainScrollFunc2FrameLine3.Parent = MainFunction.Player
+MainScrollFunc2FrameLine3.Position = UDim2.new(0, 0,0.59, 0)
+MainScrollFunc2FrameLine3.Size = UDim2.new(0, 494,0, 1)
+MainScrollFunc2FrameLine3.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc2FrameLine3.BorderSizePixel = "0"
+MainScrollFunc2FrameLine3.Name = "Line3"
 MainScrollFunc2FrameNoclipCategory.Parent = MainFunction.Player
 MainScrollFunc2FrameNoclipCategory.Name = "Noclip Category"
 MainScrollFunc2FrameNoclipCategory.BackgroundTransparency = "1"
@@ -468,6 +479,38 @@ MainScrollFunc2FrameFlyCategoryEnableButton.TextColor3 = Color3.new(0, 0, 0)
 MainScrollFunc2FrameFlyCategoryEnableButton.TextScaled = true
 MainScrollFunc2FrameFlyCategoryEnableButton.TextSize = "14"
 MainScrollFunc2FrameFlyCategoryEnableButton.TextWrapped = true
+MainScrollFunc2FrameBTools.Parent = MainFunction.Player
+MainScrollFunc2FrameBTools.Name = "BTools"
+MainScrollFunc2FrameBTools.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc2FrameBTools.BorderSizePixel = "0"
+MainScrollFunc2FrameBTools.Position = UDim2.new(0.028, 0,0.619, 0)
+MainScrollFunc2FrameBTools.Size = UDim2.new(0, 109,0, 24)
+MainScrollFunc2FrameBTools.Font = Enum.Font.SourceSansBold
+MainScrollFunc2FrameBTools.FontFace.Bold = true
+MainScrollFunc2FrameBTools.RichText = true
+MainScrollFunc2FrameBTools.Text = "BTools"
+MainScrollFunc2FrameBTools.TextColor3 = Color3.new(0, 0, 0)
+MainScrollFunc2FrameBTools.TextScaled = true
+MainScrollFunc2FrameBTools.TextSize = "14"
+MainScrollFunc2FrameBTools.TextWrapped = true
+MainScrollFunc2FrameBToolsUICorner.Parent = MainScrollFunc2FrameBTools
+MainScrollFunc2FrameBToolsUICorner.CornerRadius = UDim.new(0, 8)
+MainScrollFunc2FrameFullBright.Parent = MainFunction.Player
+MainScrollFunc2FrameFullBright.Name = "FullBright"
+MainScrollFunc2FrameFullBright.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc2FrameFullBright.BorderSizePixel = "0"
+MainScrollFunc2FrameFullBright.Position = UDim2.new(0.285, 0,0.619, 0)
+MainScrollFunc2FrameFullBright.Size = UDim2.new(0, 109,0, 24)
+MainScrollFunc2FrameFullBright.Font = Enum.Font.SourceSansBold
+MainScrollFunc2FrameFullBright.FontFace.Bold = true
+MainScrollFunc2FrameFullBright.RichText = true
+MainScrollFunc2FrameFullBright.Text = "FullBright (On/Off)"
+MainScrollFunc2FrameFullBright.TextColor3 = Color3.new(0, 0, 0)
+MainScrollFunc2FrameFullBright.TextScaled = true
+MainScrollFunc2FrameFullBright.TextSize = "14"
+MainScrollFunc2FrameFullBright.TextWrapped = true
+MainScrollFunc2FrameFullBrightUICorner.Parent = MainScrollFunc2FrameFullBright
+MainScrollFunc2FrameFullBrightUICorner.CornerRadius = UDim.new(0, 8)
 MainScrollFunc2FrameFlyCategoryEnableButtonUICorner.Parent = MainScrollFunc2FrameFlyCategoryEnableButton
 MainScrollFunc2FrameFlyCategoryEnableButtonUICorner.CornerRadius = UDim.new(0, 8)
 MainScrollFunc2FrameFlyCategorySpeedEnter.Parent = MainScrollFunc2FrameFlyCategory
@@ -2890,6 +2933,134 @@ function aimbotespload()
 		AddTracers(plr)
 	end)
 end
+
+MainScrollFunc2FrameFullBright.MouseButton1Click:Connect(function()
+	if not _G.FullBrightExecuted then
+
+		_G.FullBrightEnabled = false
+
+		_G.NormalLightingSettings = {
+			Brightness = game:GetService("Lighting").Brightness,
+			ClockTime = game:GetService("Lighting").ClockTime,
+			FogEnd = game:GetService("Lighting").FogEnd,
+			GlobalShadows = game:GetService("Lighting").GlobalShadows,
+			Ambient = game:GetService("Lighting").Ambient
+		}
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("Brightness"):Connect(function()
+			if game:GetService("Lighting").Brightness ~= 3 and game:GetService("Lighting").Brightness ~= _G.NormalLightingSettings.Brightness then
+				_G.NormalLightingSettings.Brightness = game:GetService("Lighting").Brightness
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").Brightness = 3
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("ClockTime"):Connect(function()
+			if game:GetService("Lighting").ClockTime ~= 12 and game:GetService("Lighting").ClockTime ~= _G.NormalLightingSettings.ClockTime then
+				_G.NormalLightingSettings.ClockTime = game:GetService("Lighting").ClockTime
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").ClockTime = 12
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("FogEnd"):Connect(function()
+			if game:GetService("Lighting").FogEnd ~= 786543 and game:GetService("Lighting").FogEnd ~= _G.NormalLightingSettings.FogEnd then
+				_G.NormalLightingSettings.FogEnd = game:GetService("Lighting").FogEnd
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").FogEnd = 786543
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("GlobalShadows"):Connect(function()
+			if game:GetService("Lighting").GlobalShadows ~= false and game:GetService("Lighting").GlobalShadows ~= _G.NormalLightingSettings.GlobalShadows then
+				_G.NormalLightingSettings.GlobalShadows = game:GetService("Lighting").GlobalShadows
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").GlobalShadows = false
+			end
+		end)
+
+		game:GetService("Lighting"):GetPropertyChangedSignal("Ambient"):Connect(function()
+			if game:GetService("Lighting").Ambient ~= Color3.fromRGB(178, 178, 178) and game:GetService("Lighting").Ambient ~= _G.NormalLightingSettings.Ambient then
+				_G.NormalLightingSettings.Ambient = game:GetService("Lighting").Ambient
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+			end
+		end)
+
+		game:GetService("Lighting").Brightness = 3
+		game:GetService("Lighting").ClockTime = 12
+		game:GetService("Lighting").FogEnd = 786543
+		game:GetService("Lighting").GlobalShadows = false
+		game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+
+		local LatestValue = true
+		spawn(function()
+			repeat
+				wait()
+			until _G.FullBrightEnabled
+			while wait() do
+				if _G.FullBrightEnabled ~= LatestValue then
+					if not _G.FullBrightEnabled then
+						game:GetService("Lighting").Brightness = _G.NormalLightingSettings.Brightness
+						game:GetService("Lighting").ClockTime = _G.NormalLightingSettings.ClockTime
+						game:GetService("Lighting").FogEnd = _G.NormalLightingSettings.FogEnd
+						game:GetService("Lighting").GlobalShadows = _G.NormalLightingSettings.GlobalShadows
+						game:GetService("Lighting").Ambient = _G.NormalLightingSettings.Ambient
+					else
+						game:GetService("Lighting").Brightness = 3
+						game:GetService("Lighting").ClockTime = 12
+						game:GetService("Lighting").FogEnd = 786543
+						game:GetService("Lighting").GlobalShadows = false
+						game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+					end
+					LatestValue = not LatestValue
+				end
+			end
+		end)
+	end
+
+	_G.FullBrightExecuted = true
+	_G.FullBrightEnabled = not _G.FullBrightEnabled
+end)
+
+MainScrollFunc2FrameBTools.MouseButton1Click:Connect(function()
+	backpack = game:GetService("Players").LocalPlayer.Backpack
+
+	hammer = Instance.new("HopperBin")
+	hammer.Name = "Hammer"
+	hammer.BinType = 4
+	hammer.Parent = backpack
+
+	cloneTool = Instance.new("HopperBin")
+	cloneTool.Name = "Clone"
+	cloneTool.BinType = 3
+	cloneTool.Parent = backpack
+
+	grabTool = Instance.new("HopperBin")
+	grabTool.Name = "Grab"
+	grabTool.BinType = 2
+	grabTool.Parent = backpack
+end)
 
 MainScrollFunc4FrameFunc1.MouseButton1Click:Connect(function()
 	GUIDestroyAnim()
