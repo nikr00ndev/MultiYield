@@ -3,7 +3,7 @@
 warn("MultiYield Loader loading...")
 
 if game.ReplicatedStorage:FindFirstChild("MY_LOADED") then
-	warn("sigma kriper")
+	error("MultiYield Loaded")
 end
 
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "Made by: nikr00n_dev!"})
