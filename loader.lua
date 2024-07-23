@@ -1,8 +1,8 @@
 --MultiYield Loader
 
-warn("MultiYield Loader loading...")
+warn("MultiYield KeySystem loading...")
 
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "Made by: nikr00n_dev!"})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Keysystem", Text = "Made by: nikr00n_dev!"})
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield Loader", Text = "MultiYield Loader Loading..."})
 
 --Locals
