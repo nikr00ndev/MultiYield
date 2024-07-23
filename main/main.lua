@@ -2904,6 +2904,7 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	GuiMessage("MultiYield", "MultiYield restarting...")
 	GUIDestroyAnim()
 	MYGUI:Destroy()
+	MYFolder.Core.CoreLoader.Parent = MYFolder
 	MYFolder.Main:Destroy()
 	MYFolder.Debug:Destroy()
 	MYFolder.Core:Destroy()
