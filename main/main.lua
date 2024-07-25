@@ -27,6 +27,8 @@ local CoreMain = Instance.new("StringValue")
 local KeyFolder = MYFolder
 local MainFolder = Instance.new("Folder")
 local CoreLoader = game.ReplicatedStorage.MultiYield.CoreLoader
+local UserInputServiceMY = game:GetService("UserInputService")
+local HttpServiceMY = game:GetService("HttpService")
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
@@ -3243,6 +3245,20 @@ else
 	error("Invalid Key")
 	script:Destroy()
 end
+
+UserInputServiceMY.InputBegan:Connect(function(input, keyinput)
+	if input.KeyCode == Enum.KeyCode.F3 then
+		if MYGUI.Main.Visible == false then
+			MYGUI.Main.Visible = true
+			WarnMessage("MultiYield shown.")
+			GuiMessage("MultiYield", "MultiYield shown.", 1.5)
+		elseif MYGUI.Main.Visible == true then
+			MYGUI.Main.Visible = false
+			WarnMessage("MultiYield hiden.")
+			GuiMessage("MultiYield", "MultiYield hiden.", 1.5)
+		end
+	end
+end)
 
 aimbotespload()
 Debug5.Value = "OK"
