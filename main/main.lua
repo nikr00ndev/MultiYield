@@ -34,6 +34,7 @@ local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
 local MainHideButton = Instance.new("TextButton")
 local MainNameText = Instance.new("TextLabel")
+local MainDescriptionText = Instance.new("TextLabel")
 local MainScrolling = Instance.new("ScrollingFrame")
 local MainFunction = Instance.new("Frame")
 local MainScrollFunc1 = Instance.new("TextButton")
@@ -205,6 +206,19 @@ MainNameText.Text = "MultiYield"
 MainNameText.TextColor3 = Color3.new(1, 1, 1)
 MainNameText.TextScaled = true
 MainNameText.TextXAlignment = "Left"
+MainDescriptionText.TextSize = "14"
+MainDescriptionText.Parent = Main
+MainDescriptionText.Font = Enum.Font.SourceSansBold
+MainDescriptionText.Name = "Description"
+MainDescriptionText.BackgroundTransparency = "1"
+MainDescriptionText.Position = UDim2.new(0.708, 0,-0.007, 0)
+MainDescriptionText.Size = UDim2.new(0, 154,0, 24)
+MainDescriptionText.FontFace.Bold = true
+MainDescriptionText.RichText = true
+MainDescriptionText.Text = "Press F3 or icon to hide and show!"
+MainDescriptionText.TextColor3 = Color3.new(1, 1, 1)
+MainDescriptionText.TextScaled = true
+MainDescriptionText.TextXAlignment = "Right"
 MainScrolling.Parent = Main
 MainScrolling.BorderSizePixel = "0"
 MainScrolling.BorderColor3 = Color3.new(0, 0, 0)
@@ -977,6 +991,9 @@ MainScrollFuncStartName2.TextSize = "14"
 function GUILoadAnim()
 	MainFunction.Visible = false
 	MainScrolling.Visible = false
+	MainNameText.Visible = false
+	MainDescriptionText.Visible = false
+	MainHideButton.Visible = false
 	Main:TweenSize(
 		UDim2.new(0, 638,0, 347),
 		Enum.EasingDirection.Out,
@@ -986,6 +1003,9 @@ function GUILoadAnim()
 	wait(2)
 	MainFunction.Visible = true
 	MainScrolling.Visible = true
+	MainNameText.Visible = true
+	MainDescriptionText.Visible = true
+	MainHideButton.Visible = true
 	GUIOpenIcon:TweenSize(
 		UDim2.new(0, 50,0, 50),
 		Enum.EasingDirection.Out,
@@ -996,6 +1016,9 @@ end
 function GUIDestroyAnim()
 	MainFunction.Visible = false
 	MainScrolling.Visible = false
+	MainNameText.Visible = false
+	MainDescriptionText.Visible = false
+	MainHideButton.Visible = false
 	Main:TweenSize(
 		UDim2.new(0, 0, 0, 0),
 		Enum.EasingDirection.Out,
@@ -1003,8 +1026,6 @@ function GUIDestroyAnim()
 		2
 	)
 	wait(2)
-	MainFunction.Visible = true
-	MainScrolling.Visible = true
 	GUIOpenIcon:TweenSize(
 		UDim2.new(0, 0, 0, 0),
 		Enum.EasingDirection.Out,
