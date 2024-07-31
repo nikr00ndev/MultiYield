@@ -128,7 +128,6 @@ local Messages = Instance.new("Frame")
 
 local GUIOpenIcon = Instance.new("ImageButton")
 local GUIOpenIconUICorner = Instance.new("UICorner")
-local lol = 1
 
 -------------------------------------------------------------------------------
 --Getgenv
@@ -199,6 +198,7 @@ Debug5.Name = "Debug5"
 Debug1.Value = "OK"
 CoreLoader.Parent = CoreFolder
 
+GUIOpenIcon.ZIndex = 9999
 Main.Parent = Gui
 Main.Name = "Main"
 Main.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
