@@ -1,5 +1,4 @@
 --MultiYield Loader
-
 warn("MultiYield KeySystem loading...")
 
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield KeySystem", Text = "Made by: nikr00n_dev!"})
@@ -21,6 +20,13 @@ local Key = "BodyParty"
 local KeyI = Instance.new("StringValue")
 local MainFolder = Instance.new("Folder")
 local Core = Instance.new("StringValue")
+
+Frame.ZIndex = 990
+DestroyButton.ZIndex = 991
+CheckKey.ZIndex = 991
+GetKey.ZIndex = 991
+Name.ZIndex = 991
+KeyEnter.ZIndex = 991
 
 --Parameters
 Gui.Name = "MultiYieldKeySystem"
@@ -184,7 +190,7 @@ end)
 DestroyButton.MouseButton1Click:Connect(function()
 	game.ReplicatedStorage.MultiYield:Destroy()
 	GUIDestroyAnim()
-	game.Players.LocalPlayer.PlayerGui.MultiYieldKeySystem:Destroy()
+	game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield KeySystem", Text = "MultiYield KeySystem Destroyed."})
 	warn("MultiYield KeySystem Destroyed")
 end)
@@ -192,7 +198,7 @@ CheckKey.MouseButton1Click:Connect(function()
 	if KeyEnter.Text == Key then
 		KeyI.Value = Key
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua'))()
-		game.Players.LocalPlayer.PlayerGui.MultiYieldKeySystem:Destroy()
+		game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
 	else
 		KeyEnter.Text = "Invalid Key!"
 	end
