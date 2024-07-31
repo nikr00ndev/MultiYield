@@ -29,6 +29,7 @@ local MainFolder = Instance.new("Folder")
 local CoreLoader = game.ReplicatedStorage.MultiYield.CoreLoader
 local UserInputServiceMY = game:GetService("UserInputService")
 local HttpServiceMY = game:GetService("HttpService")
+--local MYVersion = MYFolder.Version.Value
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
@@ -67,10 +68,13 @@ local MainScrollFunc6FrameAllLinksLink = Instance.new("TextBox")
 local MainScrollFunc6FrameDiscordServerLink = Instance.new("TextBox")
 local MainScrollFunc6FrameAllLinksLinkUICorner = Instance.new("UICorner")
 local MainScrollFunc6FrameDiscordServerLinkUICorner = Instance.new("UICorner")
+local MainScrollFunc2FrameScroll = Instance.new("ScrollingFrame")
 local MainScrollFunc2FrameLine = Instance.new("Frame")
 local MainScrollFunc2FrameLine2 = Instance.new("Frame")
 local MainScrollFunc2FrameLine3 = Instance.new("Frame")
 local MainScrollFunc6FrameLine4 = Instance.new("Frame")
+local MainScrollFunc2FrameLine5 = Instance.new("Frame")
+local MainScrollFunc2FrameLine6 = Instance.new("Frame")
 local MainScrollFunc2FrameNoclipCategory = Instance.new("Frame")
 local MainScrollFunc2FrameFlyCategory = Instance.new("Frame")
 local MainScrollFunc2FramePlayerCategory = Instance.new("Frame")
@@ -78,7 +82,6 @@ local MainScrollFunc2FrameNoclipCategoryEnableButton = Instance.new("TextButton"
 local MainScrollFunc2FrameNoclipCategoryEnableButtonUICorner = Instance.new("UICorner")
 local MainScrollFunc2FrameBTools = Instance.new("TextButton")
 local MainScrollFunc2FrameFullBright = Instance.new("TextButton")
-local MainScrollFunc2FrameFling = Instance.new("TextButton")
 local MainScrollFunc2FrameNoclipCategoryText = Instance.new("TextLabel")
 local MainScrollFunc2FrameFlyCategorySpeedEnter = Instance.new("TextBox")
 local MainScrollFunc2FrameFlyCategorySpeedEnterUICorner = Instance.new("UICorner")
@@ -86,7 +89,6 @@ local MainScrollFunc2FrameFlyCategoryEnableButton = Instance.new("TextButton")
 local MainScrollFunc2FrameFlyCategoryEnableButtonUICorner = Instance.new("UICorner")
 local MainScrollFunc2FrameBToolsUICorner = Instance.new("UICorner")
 local MainScrollFunc2FrameFullBrightUICorner = Instance.new("UICorner")
-local MainScrollFunc2FrameFlingUICorner = Instance.new("UICorner")
 local MainScrollFunc2FrameFlyCategoryText = Instance.new("TextLabel")
 local MainScrollFunc2FramePlayerCategoryTextWalk = Instance.new("TextLabel")
 local MainScrollFunc2FramePlayerCategoryTextJump = Instance.new("TextLabel")
@@ -126,6 +128,29 @@ local Messages = Instance.new("Frame")
 
 local GUIOpenIcon = Instance.new("ImageButton")
 local GUIOpenIconUICorner = Instance.new("UICorner")
+local lol = 1
+
+-------------------------------------------------------------------------------
+--Getgenv
+--[[
+getgenv().MultiYield = {
+	Main = {
+		["Key"] = MYFolder.Key.Value,
+	}
+}
+--]]
+
+-------------------------------------------------------------------------------
+--List
+
+local MultiYieldList = {
+	Main = {
+		Key = MYFolder.Key.Value;
+	},
+	Core = {
+		MYVersion = nil;
+	}
+}
 
 -------------------------------------------------------------------------------
 --Functions
@@ -137,9 +162,11 @@ function GuiMessage(MesTitle, MesText, MesDuration)
 		Duration = MesDuration or 3
 	})
 end
+
 function WarnMessage(Message)
 	warn(Message)
 end
+
 GuiMessage("MultiYield", "MultiYield loading...", 2)
 -------------------------------------------------------------------------------
 --Parameters
@@ -556,20 +583,20 @@ MainScrollFunc6FrameDiscordServerLink.TextWrapped = true
 MainScrollFunc6FrameDiscordServerLinkUICorner.Parent = MainScrollFunc6FrameDiscordServerLink
 MainScrollFunc6FrameDiscordServerLinkUICorner.CornerRadius = UDim.new(0, 9)
 
-MainScrollFunc2FrameLine.Parent = MainFunction.Player
-MainScrollFunc2FrameLine.Position = UDim2.new(0, 0,0.335, 0)
+MainScrollFunc2FrameLine.Parent = MainScrollFunc2FrameScroll
+MainScrollFunc2FrameLine.Position = UDim2.new(0, 0,0.235, 0)
 MainScrollFunc2FrameLine.Size = UDim2.new(0, 494,0, 1)
 MainScrollFunc2FrameLine.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc2FrameLine.BorderSizePixel = "0"
 MainScrollFunc2FrameLine.Name = "Line"
-MainScrollFunc2FrameLine2.Parent = MainFunction.Player
-MainScrollFunc2FrameLine2.Position = UDim2.new(0, 0,0.46, 0)
+MainScrollFunc2FrameLine2.Parent = MainScrollFunc2FrameScroll
+MainScrollFunc2FrameLine2.Position = UDim2.new(0, 0,0.172, 0)
 MainScrollFunc2FrameLine2.Size = UDim2.new(0, 494,0, 1)
 MainScrollFunc2FrameLine2.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc2FrameLine2.BorderSizePixel = "0"
 MainScrollFunc2FrameLine2.Name = "Line2"
-MainScrollFunc2FrameLine3.Parent = MainFunction.Player
-MainScrollFunc2FrameLine3.Position = UDim2.new(0, 0,0.59, 0)
+MainScrollFunc2FrameLine3.Parent = MainScrollFunc2FrameScroll
+MainScrollFunc2FrameLine3.Position = UDim2.new(0, 0,0.31, 0)
 MainScrollFunc2FrameLine3.Size = UDim2.new(0, 494,0, 1)
 MainScrollFunc2FrameLine3.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc2FrameLine3.BorderSizePixel = "0"
@@ -580,7 +607,19 @@ MainScrollFunc6FrameLine4.Size = UDim2.new(0, 494,0, 1)
 MainScrollFunc6FrameLine4.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc6FrameLine4.BorderSizePixel = "0"
 MainScrollFunc6FrameLine4.Name = "Line"
-MainScrollFunc2FrameNoclipCategory.Parent = MainFunction.Player
+MainScrollFunc2FrameLine5.Parent = MainScrollFunc2FrameScroll
+MainScrollFunc2FrameLine5.Position = UDim2.new(0, 0,0.48, 0)
+MainScrollFunc2FrameLine5.Size = UDim2.new(0, 494,0, 1)
+MainScrollFunc2FrameLine5.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc2FrameLine5.BorderSizePixel = "0"
+MainScrollFunc2FrameLine5.Name = "Line5"
+MainScrollFunc2FrameLine6.Parent = MainScrollFunc2FrameScroll
+MainScrollFunc2FrameLine6.Position = UDim2.new(0, 0,0.39, 0)
+MainScrollFunc2FrameLine6.Size = UDim2.new(0, 494,0, 1)
+MainScrollFunc2FrameLine6.BackgroundColor3 = Color3.new(1, 1, 1)
+MainScrollFunc2FrameLine6.BorderSizePixel = "0"
+MainScrollFunc2FrameLine6.Name = "Line4"
+MainScrollFunc2FrameNoclipCategory.Parent = MainScrollFunc2FrameScroll
 MainScrollFunc2FrameNoclipCategory.Name = "Noclip Category"
 MainScrollFunc2FrameNoclipCategory.BackgroundTransparency = "1"
 MainScrollFunc2FrameNoclipCategory.BorderSizePixel = "1"
@@ -588,7 +627,7 @@ MainScrollFunc2FrameNoclipCategory.Position = UDim2.new(-0.001, 0,0.002, 0)
 MainScrollFunc2FrameNoclipCategory.Size = UDim2.new(0, 495,0, 308)
 MainScrollFunc2FrameNoclipCategory.Visible = true
 MainScrollFunc2FrameNoclipCategory.BackgroundColor3 = Color3.new(0.639216, 0.635294, 0.647059)
-MainScrollFunc2FrameFlyCategory.Parent = MainFunction.Player
+MainScrollFunc2FrameFlyCategory.Parent = MainScrollFunc2FrameScroll
 MainScrollFunc2FrameFlyCategory.Name = "Fly Category"
 MainScrollFunc2FrameFlyCategory.BackgroundTransparency = "1"
 MainScrollFunc2FrameFlyCategory.BorderSizePixel = "1"
@@ -596,7 +635,7 @@ MainScrollFunc2FrameFlyCategory.Position = UDim2.new(-0.001, 0,0.002, 0)
 MainScrollFunc2FrameFlyCategory.Size = UDim2.new(0, 495,0, 308)
 MainScrollFunc2FrameFlyCategory.Visible = true
 MainScrollFunc2FrameFlyCategory.BackgroundColor3 = Color3.new(0.639216, 0.635294, 0.647059)
-MainScrollFunc2FramePlayerCategory.Parent = MainFunction.Player
+MainScrollFunc2FramePlayerCategory.Parent = MainScrollFunc2FrameScroll
 MainScrollFunc2FramePlayerCategory.Name = "Player Category"
 MainScrollFunc2FramePlayerCategory.BackgroundTransparency = "1"
 MainScrollFunc2FramePlayerCategory.BorderSizePixel = "1"
@@ -618,11 +657,11 @@ MainScrollFunc2FrameFlyCategoryEnableButton.TextColor3 = Color3.new(0, 0, 0)
 MainScrollFunc2FrameFlyCategoryEnableButton.TextScaled = true
 MainScrollFunc2FrameFlyCategoryEnableButton.TextSize = "14"
 MainScrollFunc2FrameFlyCategoryEnableButton.TextWrapped = true
-MainScrollFunc2FrameBTools.Parent = MainFunction.Player
+MainScrollFunc2FrameBTools.Parent = MainScrollFunc2FrameScroll
 MainScrollFunc2FrameBTools.Name = "BTools"
 MainScrollFunc2FrameBTools.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc2FrameBTools.BorderSizePixel = "0"
-MainScrollFunc2FrameBTools.Position = UDim2.new(0.028, 0,0.619, 0)
+MainScrollFunc2FrameBTools.Position = UDim2.new(0.028, 0,0.33, 0)
 MainScrollFunc2FrameBTools.Size = UDim2.new(0, 109,0, 24)
 MainScrollFunc2FrameBTools.Font = Enum.Font.SourceSansBold
 MainScrollFunc2FrameBTools.FontFace.Bold = true
@@ -634,11 +673,11 @@ MainScrollFunc2FrameBTools.TextSize = "14"
 MainScrollFunc2FrameBTools.TextWrapped = true
 MainScrollFunc2FrameBToolsUICorner.Parent = MainScrollFunc2FrameBTools
 MainScrollFunc2FrameBToolsUICorner.CornerRadius = UDim.new(0, 8)
-MainScrollFunc2FrameFullBright.Parent = MainFunction.Player
+MainScrollFunc2FrameFullBright.Parent = MainScrollFunc2FrameScroll
 MainScrollFunc2FrameFullBright.Name = "FullBright"
 MainScrollFunc2FrameFullBright.BackgroundColor3 = Color3.new(1, 1, 1)
 MainScrollFunc2FrameFullBright.BorderSizePixel = "0"
-MainScrollFunc2FrameFullBright.Position = UDim2.new(0.285, 0,0.619, 0)
+MainScrollFunc2FrameFullBright.Position = UDim2.new(0.285, 0,0.33, 0)
 MainScrollFunc2FrameFullBright.Size = UDim2.new(0, 109,0, 24)
 MainScrollFunc2FrameFullBright.Font = Enum.Font.SourceSansBold
 MainScrollFunc2FrameFullBright.FontFace.Bold = true
@@ -650,22 +689,14 @@ MainScrollFunc2FrameFullBright.TextSize = "14"
 MainScrollFunc2FrameFullBright.TextWrapped = true
 MainScrollFunc2FrameFullBrightUICorner.Parent = MainScrollFunc2FrameFullBright
 MainScrollFunc2FrameFullBrightUICorner.CornerRadius = UDim.new(0, 8)
-MainScrollFunc2FrameFling.Parent = MainFunction.Player
-MainScrollFunc2FrameFling.Name = "Fling"
-MainScrollFunc2FrameFling.BackgroundColor3 = Color3.new(1, 1, 1)
-MainScrollFunc2FrameFling.BorderSizePixel = "0"
-MainScrollFunc2FrameFling.Position = UDim2.new(0.552, 0,0.619, 0)
-MainScrollFunc2FrameFling.Size = UDim2.new(0, 109,0, 24)
-MainScrollFunc2FrameFling.Font = Enum.Font.SourceSansBold
-MainScrollFunc2FrameFling.FontFace.Bold = true
-MainScrollFunc2FrameFling.RichText = true
-MainScrollFunc2FrameFling.Text = "Fling (On/Off)"
-MainScrollFunc2FrameFling.TextColor3 = Color3.new(0, 0, 0)
-MainScrollFunc2FrameFling.TextScaled = true
-MainScrollFunc2FrameFling.TextSize = "14"
-MainScrollFunc2FrameFling.TextWrapped = true
-MainScrollFunc2FrameFlingUICorner.Parent = MainScrollFunc2FrameFling
-MainScrollFunc2FrameFlingUICorner.CornerRadius = UDim.new(0, 8)
+MainScrollFunc2FrameScroll.Parent = MainFunction.Player
+MainScrollFunc2FrameScroll.Name = "Root"
+MainScrollFunc2FrameScroll.BackgroundTransparency = "1"
+MainScrollFunc2FrameScroll.BorderSizePixel = "0"
+MainScrollFunc2FrameScroll.Position = UDim2.new(0, 0, 0, 0)
+MainScrollFunc2FrameScroll.Size = UDim2.new(0, 493,0, 308)
+MainScrollFunc2FrameScroll.CanvasSize = UDim2.new(0, 0, 2, 0)
+MainScrollFunc2FrameScroll.ScrollBarImageColor3 = Color3.new(0, 0, 0)
 MainScrollFunc2FrameFlyCategoryEnableButtonUICorner.Parent = MainScrollFunc2FrameFlyCategoryEnableButton
 MainScrollFunc2FrameFlyCategoryEnableButtonUICorner.CornerRadius = UDim.new(0, 8)
 MainScrollFunc2FrameFlyCategorySpeedEnter.Parent = MainScrollFunc2FrameFlyCategory
@@ -1036,7 +1067,8 @@ end
 
 Messages.Parent = Gui
 Messages.Name = "Messages"
-Messages.Visible = false
+Messages.Visible = true
+Messages.BackgroundTransparency = "1"
 Messages.Position = UDim2.new(0.826, 0,0, 0)
 Messages.Size = UDim2.new(0.174, 0,1, 0)
 Messages.BorderColor3 = Color3.new(1, 1, 1)
@@ -1054,6 +1086,98 @@ GUIOpenIconUICorner.CornerRadius = UDim.new(0, 15)
 Debug2.Value = "OK"
 
 GUILoadAnim()
+function SendGuiMessage(Title, Message, Duration)
+	local MessageFrame = Instance.new("Frame")
+	local MessageFrameUICorner = Instance.new("UICorner")
+	local MessageFrameLine = Instance.new("Frame")
+	local MessageFrameTextTitle = Instance.new("TextLabel")
+	local MessageFrameTextMessage = Instance.new("TextLabel")
+	local MessageFrameCloseButton = Instance.new("TextButton")
+
+	MessageFrame.Parent = Messages
+	MessageFrame.Name = "Message"
+	MessageFrame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+	MessageFrame.BorderSizePixel = "0"
+	MessageFrame.Position = UDim2.new(0.004, 0,1, 0)
+	MessageFrame.Size = UDim2.new(0, 222,0, 138)
+
+	MessageFrameUICorner.Parent = MessageFrame
+	MessageFrameUICorner.CornerRadius = UDim.new(0, 7)
+
+	MessageFrameLine.Parent = MessageFrame
+	MessageFrameLine.Name = "Line"
+	MessageFrameLine.BackgroundColor3 = Color3.new(1, 1, 1)
+	MessageFrameLine.BorderSizePixel = "0"
+	MessageFrameLine.Position = UDim2.new(0, 0,0.116, 0)
+	MessageFrameLine.Size = UDim2.new(0, 221,0, 1)
+
+	MessageFrameTextTitle.Parent = MessageFrame
+	MessageFrameTextTitle.Name = "Title"
+	MessageFrameTextTitle.BackgroundTransparency = "1"
+	MessageFrameTextTitle.BorderSizePixel = "0"
+	MessageFrameTextTitle.Position = UDim2.new(0, 0,0, 0)
+	MessageFrameTextTitle.Size = UDim2.new(0.928, 0,0.123, 0)
+	MessageFrameTextTitle.Font = Enum.Font.SourceSansBold
+	MessageFrameTextTitle.FontFace.Bold = true
+	MessageFrameTextTitle.RichText = false
+	MessageFrameTextTitle.Text = Title
+	MessageFrameTextTitle.TextColor3 = Color3.new(1, 1, 1)
+	MessageFrameTextTitle.TextScaled = false
+	MessageFrameTextTitle.TextSize = "16"
+	MessageFrameTextTitle.TextWrapped = true
+
+	MessageFrameTextMessage.Parent = MessageFrame
+	MessageFrameTextMessage.Name = "Message"
+	MessageFrameTextMessage.BackgroundTransparency = "1"
+	MessageFrameTextMessage.BorderSizePixel = "0"
+	MessageFrameTextMessage.Position = UDim2.new(0, 0,0.116, 0)
+	MessageFrameTextMessage.Size = UDim2.new(1, 0,0.884, 0)
+	MessageFrameTextMessage.Font = Enum.Font.SourceSansBold
+	MessageFrameTextMessage.FontFace.Bold = true
+	MessageFrameTextMessage.RichText = false
+	MessageFrameTextMessage.Text = Message
+	MessageFrameTextMessage.TextColor3 = Color3.new(1, 1, 1)
+	MessageFrameTextMessage.TextScaled = false
+	MessageFrameTextMessage.TextSize = "16"
+	MessageFrameTextMessage.TextWrapped = true
+	
+	MessageFrameCloseButton.Parent = MessageFrame
+	MessageFrameCloseButton.Name = "Close"
+	MessageFrameCloseButton.BackgroundTransparency = "1"
+	MessageFrameCloseButton.BorderSizePixel = "0"
+	MessageFrameCloseButton.Position = UDim2.new(0.932, 0,-0.007, 0)
+	MessageFrameCloseButton.Size = UDim2.new(0, 15,0, 17)
+	MessageFrameCloseButton.Font = Enum.Font.SourceSansBold
+	MessageFrameCloseButton.FontFace.Bold = true
+	MessageFrameCloseButton.RichText = true
+	MessageFrameCloseButton.Text = "X"
+	MessageFrameCloseButton.TextColor3 = Color3.new(1, 0, 0)
+	MessageFrameCloseButton.TextScaled = true
+	MessageFrameCloseButton.TextSize = "14"
+	MessageFrameCloseButton.TextWrapped = true
+	
+	MessageFrameCloseButton.MouseButton1Click:Connect(function()
+		MessageFrame:Destroy()
+	end)
+
+	MessageFrame:TweenPosition(
+		UDim2.new(0.004, 0,0.769, 0),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		2
+	)
+
+	wait(Duration)
+
+	MessageFrame:TweenPosition(
+		UDim2.new(0.004, 0,1, 0),
+		Enum.EasingDirection.Out,
+		Enum.EasingStyle.Sine,
+		2
+	)
+	wait(2)
+	MessageFrame:Destroy()
+end
 
 -------------------------------------------------------------------------------
 --Draggable GUI
@@ -1141,13 +1265,19 @@ UserInputService.InputChanged:Connect(function(input)
 end)
 Debug3.Value = "OK"
 
+
 -------------------------------------------------------------------------------
 --Functions
+function Dev()
+	print("Http Enabled:".. HttpServiceMY.HttpEnabled)
+end
+
 MainHideButton.MouseButton1Click:Connect(function()
 	MYGUI.Main.Visible = false
 	WarnMessage("MultiYield hiden.")
 	GuiMessage("MultiYield", "MultiYield hiden.", 1.5)
 end)
+
 
 GUIOpenIcon.MouseButton1Click:Connect(function()
 	if MYGUI.Main.Visible == false then
@@ -3195,10 +3325,6 @@ MainScrollFunc2FrameFullBright.MouseButton1Click:Connect(function()
 	_G.FullBrightEnabled = not _G.FullBrightEnabled
 end)
 
-MainScrollFunc2FrameFling.MouseButton1Click:Connect(function()
-
-end)
-
 MainScrollFunc5FrameExecuteButton.MouseButton1Click:Connect(function()
 	local newexecutedscript = Instance.new("LocalScript")
 	local scripttext = MainScrollFunc5FrameScriptEnter.Text
@@ -3270,7 +3396,7 @@ end
 UserInputServiceMY.InputBegan:Connect(function(input, keyinput)
 	if input.KeyCode == Enum.KeyCode.F3 then
 		if MYGUI.Main.Visible == false then
-			MYGUI.Main.Visible = true
+			MYGUI.Main.Visible = true 
 			WarnMessage("MultiYield shown.")
 			GuiMessage("MultiYield", "MultiYield shown.", 1.5)
 		elseif MYGUI.Main.Visible == true then
@@ -3283,4 +3409,5 @@ end)
 
 aimbotespload()
 Debug5.Value = "OK"
+WarnMessage("MultiYield started with key: " .. MultiYieldList.Main.Key)
 CoreMain.Value = "AMS_B_@nd_C_B_V_4"
