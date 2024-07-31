@@ -190,7 +190,7 @@ end)
 DestroyButton.MouseButton1Click:Connect(function()
 	game.ReplicatedStorage.MultiYield:Destroy()
 	GUIDestroyAnim()
-	game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
+	game.Players.LocalPlayer.PlayerGui.MultiYieldKeySystem:Destroy()
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MultiYield KeySystem", Text = "MultiYield KeySystem Destroyed."})
 	warn("MultiYield KeySystem Destroyed")
 end)
@@ -198,7 +198,7 @@ CheckKey.MouseButton1Click:Connect(function()
 	if KeyEnter.Text == Key then
 		KeyI.Value = Key
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main.lua'))()
-		game.Players.LocalPlayer.PlayerGui.MultiYieldLoader:Destroy()
+		game.Players.LocalPlayer.PlayerGui.MultiYieldKeySystem:Destroy()
 	else
 		KeyEnter.Text = "Invalid Key!"
 	end
