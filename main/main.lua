@@ -1,9 +1,8 @@
 --MultiYield
 
---Notes
---game.Players.LocalPlayer.PlayerGui.MultiCrake:Destroy() - Destroying gui
---loadstring(game:HttpGet(('https://pastebin.com/raw/nkr8nP9m'),true))() - LoadString
--------------------------------------------------------------------------------
+if not game:IsLoaded() then
+	game.Loaded:Wait();
+end
 
 warn("MultiYield loading...")
 
@@ -29,7 +28,6 @@ local MainFolder = Instance.new("Folder")
 local CoreLoader = game.ReplicatedStorage.MultiYield.CoreLoader
 local UserInputServiceMY = game:GetService("UserInputService")
 local HttpServiceMY = game:GetService("HttpService")
---local MYVersion = MYFolder.Version.Value
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
