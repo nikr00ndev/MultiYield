@@ -12,7 +12,6 @@ FIXCoreLoader.Parent = FIXMainFolder
 local LocalPlayer = game.Players.LocalPlayer
 local PlayerGUI = LocalPlayer.PlayerGui
 local PlayerBackpack = LocalPlayer.Backpack
-local ReplicatedStorage = game.ReplicatedStorage
 local MYFolder = game.ReplicatedStorage.MultiYield
 local Gui = Instance.new("ScreenGui")
 local DebugFolder = Instance.new("Folder")
@@ -27,8 +26,6 @@ local CoreMain = Instance.new("StringValue")
 local KeyFolder = MYFolder
 local MainFolder = Instance.new("Folder")
 local CoreLoader = game.ReplicatedStorage.MultiYield.CoreLoader
-local UserInputServiceMY = game:GetService("UserInputService")
-local HttpServiceMY = game:GetService("HttpService")
 
 local Main = Instance.new("Frame")
 local MainUICorner = Instance.new("UICorner")
