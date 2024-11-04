@@ -6,7 +6,10 @@ FIXMainFolder.Parent = game.ReplicatedStorage
 local FIXCoreLoader = Instance.new("Folder")
 FIXCoreLoader.Name = "CoreLoader"
 FIXCoreLoader.Parent = game.ReplicatedStorage.MultiYield
-local FIXKey = Instance.new("Folder")
+local FIXKey = Instance.new("StringValue")
+FIXKey.Name = "Key"
+FIXKey.Value = "BodyParty"
+FIXKey.Parent = game.ReplicatedStorage.MultiYield
 
 -------------------------------------------------------------------------------
 --Locals
