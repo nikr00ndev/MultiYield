@@ -5,7 +5,7 @@ FIXMainFolder.Name = "MultiYield"
 FIXMainFolder.Parent = game.ReplicatedStorage
 local FIXCoreLoader = Instance.new("Folder")
 FIXCoreLoader.Name = "CoreLoader"
-FIXCoreLoader.Parent = FIXMainFolder.Parent
+FIXCoreLoader.Parent = game.ReplicatedStorage.MultiYield
 
 -------------------------------------------------------------------------------
 --Locals
