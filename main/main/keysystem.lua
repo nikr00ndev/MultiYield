@@ -197,7 +197,7 @@ end)
 CheckKey.MouseButton1Click:Connect(function()
 	if KeyEnter.Text == Key then
 		KeyI.Value = Key
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/nikr00ndev/MultiYield/refs/heads/main/main/main/main.lua?token=GHSAT0AAAAAACXTJ2BFYSNJFURPUQLC4OY4ZZI2I4A'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/nikr00ndev/MultiYield/main/main/main/main.lua'))()
 		game.Players.LocalPlayer.PlayerGui.MultiYieldKeySystem:Destroy()
 	else
 		KeyEnter.Text = "Invalid Key!"
