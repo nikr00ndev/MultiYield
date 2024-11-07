@@ -1,5 +1,6 @@
 --MultiYield
 
+--NoKeySystem
 local FIXMainFolder = Instance.new("Folder")
 FIXMainFolder.Name = "MultiYield"
 FIXMainFolder.Parent = game.ReplicatedStorage
@@ -3344,7 +3345,7 @@ MainScrollFunc4FrameFunc2.MouseButton1Click:Connect(function()
 	MYFolder.Main:Destroy()
 	MYFolder.Debug:Destroy()
 	MYFolder.Core:Destroy()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/refs/heads/main/main/main.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/nikr00ndev/MultiYield/refs/heads/main/old/main.lua"))()
 	GuiMessage("MultiYield", "MultiYield restarted!", 1)
 	WarnMessage("MultiYield restarted!")
 	script:Destroy()
